@@ -1,0 +1,2299 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<title>Tính giá thành TT 99/2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+<style>
+:root{
+  --paper:#FAF8F4; --surface:#FFFFFF; --surface-2:#F3F0EA; --surface-3:#EAE5DC;
+  --ink:#1A1F26; --ink-2:#4A545F; --ink-3:#7B858F;
+  --line:#DFD8CC; --line-2:#C3BBAC;
+  --accent:#1B5E8C; --accent-soft:#E7EFF6; --accent-ink:#134A70;
+  --seal:#A93226; --seal-soft:#F8E9E7;
+  --moss:#3D6B4A; --moss-soft:#E7F0E9;
+  --amber:#8E6318; --amber-soft:#F8F0DE;
+  --plum:#5A5490; --plum-soft:#ECEAF5;
+  --shadow:0 1px 2px rgba(26,31,38,.05),0 8px 24px -12px rgba(26,31,38,.18);
+  --r:10px;
+  --f-display:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-body:"Be Vietnam Pro","Segoe UI",Roboto,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+}
+:root{--accent-ink:#134A70;}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#13161A; --surface:#1A1F25; --surface-2:#222830; --surface-3:#2B323B;
+    --ink:#E9E6E0; --ink-2:#AFB7C0; --ink-3:#7D8794;
+    --line:#2E353E; --line-2:#414A55;
+    --accent:#74B2DF; --accent-soft:#1B2A36; --accent-ink:#A6D0EE;
+    --seal:#E58A7C; --seal-soft:#31201E;
+    --moss:#8FC49F; --moss-soft:#1C2A21;
+    --amber:#D7AE68; --amber-soft:#2C2517;
+    --plum:#A9A2D8; --plum-soft:#232236;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#13161A; --surface:#1A1F25; --surface-2:#222830; --surface-3:#2B323B;
+  --ink:#E9E6E0; --ink-2:#AFB7C0; --ink-3:#7D8794;
+  --line:#2E353E; --line-2:#414A55;
+  --accent:#74B2DF; --accent-soft:#1B2A36; --accent-ink:#A6D0EE;
+  --seal:#E58A7C; --seal-soft:#31201E;
+  --moss:#8FC49F; --moss-soft:#1C2A21;
+  --amber:#D7AE68; --amber-soft:#2C2517;
+  --plum:#A9A2D8; --plum-soft:#232236;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--f-body); font-size:15px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--f-display); font-weight:600; text-wrap:balance; margin:0}
+a{color:var(--accent)}
+button{font-family:inherit}
+.num{font-variant-numeric:tabular-nums}
+.mono{font-family:var(--f-mono)}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky; top:0; z-index:40; background:var(--surface);
+  border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:16px; padding:12px 20px; flex-wrap:wrap;
+}
+.brand{display:flex; align-items:baseline; gap:12px; margin-right:auto}
+.brand .mark{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); border:1px solid var(--accent); padding:3px 7px; border-radius:4px;
+  align-self:center;
+}
+.brand h1{font-size:20px; letter-spacing:-.01em}
+.brand .sub{font-size:12px; color:var(--ink-3)}
+.tb-actions{display:flex; gap:8px; flex-wrap:wrap}
+
+.btn{
+  border:1px solid var(--line-2); background:var(--surface); color:var(--ink);
+  padding:7px 13px; border-radius:7px; font-size:13px; font-weight:500; cursor:pointer;
+  display:inline-flex; align-items:center; gap:6px; transition:background .15s,border-color .15s;
+}
+.btn:hover{background:var(--surface-2); border-color:var(--ink-3)}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+:root[data-theme="dark"] .btn.primary,
+:root:not([data-theme="light"]) .btn.primary{color:#0F1519}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .btn.primary{color:#fff}}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{border-color:transparent; background:transparent; color:var(--ink-2)}
+.btn.ghost:hover{background:var(--surface-2)}
+
+/* ---------- shell ---------- */
+.shell{display:grid; grid-template-columns:296px minmax(0,1fr); align-items:start}
+@media(max-width:1080px){.shell{grid-template-columns:1fr}}
+
+.rail{
+  position:sticky; top:61px; align-self:start; max-height:calc(100vh - 61px); overflow-y:auto;
+  border-right:1px solid var(--line); background:var(--surface-2); padding:18px 14px 40px;
+}
+@media(max-width:1080px){.rail{position:static; max-height:none; border-right:0; border-bottom:1px solid var(--line)}}
+.rail-title{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-3); margin:0 0 10px 4px;
+}
+.mlist{display:flex; flex-direction:column; gap:5px; margin-bottom:22px}
+.mitem{
+  text-align:left; border:1px solid transparent; background:transparent; color:var(--ink-2);
+  padding:9px 11px; border-radius:8px; cursor:pointer; display:grid; grid-template-columns:22px 1fr; gap:9px;
+  transition:background .14s, color .14s;
+}
+.mitem:hover{background:var(--surface-3)}
+.mitem .idx{font-family:var(--f-mono); font-size:11px; color:var(--ink-3); padding-top:2px}
+.mitem .nm{font-weight:600; font-size:13.5px; color:var(--ink); line-height:1.3}
+.mitem .ds{font-size:11.5px; color:var(--ink-3); line-height:1.35; margin-top:2px}
+.mitem[aria-pressed="true"]{background:var(--surface); border-color:var(--accent); box-shadow:var(--shadow)}
+.mitem[aria-pressed="true"] .idx{color:var(--accent)}
+.mitem:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
+
+.rail-box{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:12px; margin-bottom:14px}
+.chk{display:flex; gap:9px; align-items:flex-start; font-size:13px; color:var(--ink-2); cursor:pointer; padding:4px 0}
+.chk input{margin-top:3px; accent-color:var(--accent)}
+
+/* ---------- main ---------- */
+.main{padding:22px 26px 90px; min-width:0}
+@media(max-width:640px){.main{padding:16px 14px 70px}}
+.stack{display:flex; flex-direction:column; gap:20px; max-width:1180px}
+
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); overflow:hidden}
+.card > header{
+  display:flex; align-items:center; gap:10px; padding:13px 18px; border-bottom:1px solid var(--line);
+  background:linear-gradient(var(--surface), var(--surface-2));
+}
+.card > header h2{font-size:15.5px; letter-spacing:-.005em}
+.card > header .step{
+  font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em; color:var(--ink-3);
+  border:1px solid var(--line-2); border-radius:4px; padding:2px 6px;
+}
+.card > header .spacer{margin-left:auto}
+.card .body{padding:16px 18px}
+
+.grid{display:grid; gap:12px 16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:860px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+label.f{display:flex; flex-direction:column; gap:5px; font-size:12.5px; color:var(--ink-2); min-width:0}
+label.f .lb{display:flex; align-items:baseline; gap:6px}
+label.f .tk{
+  font-family:var(--f-mono); font-size:10.5px; color:#fff; background:var(--ink-3);
+  border-radius:3px; padding:1px 4px; letter-spacing:.02em;
+}
+.tk.k1{background:var(--accent)} .tk.k2{background:var(--moss)}
+.tk.k3{background:var(--amber)} .tk.k4{background:var(--plum)}
+:root[data-theme="dark"] .tk, :root:not([data-theme="light"]) .tk{color:#12161A}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .tk{color:#fff}}
+
+input[type=text],input[type=number],select,textarea{
+  font-family:var(--f-body); font-size:14px; color:var(--ink); background:var(--surface);
+  border:1px solid var(--line-2); border-radius:7px; padding:8px 10px; width:100%;
+  font-variant-numeric:tabular-nums; transition:border-color .15s, box-shadow .15s;
+}
+input.money,input.qty{text-align:right; font-family:var(--f-mono); font-size:13.5px}
+input:focus,select:focus,textarea:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+.hint{font-size:11.5px; color:var(--ink-3); line-height:1.4}
+
+.seg{display:flex; gap:0; border:1px solid var(--line-2); border-radius:8px; overflow:hidden; flex-wrap:wrap}
+.seg button{
+  flex:1 1 auto; border:0; background:var(--surface); color:var(--ink-2); padding:8px 10px;
+  font-size:12.5px; cursor:pointer; border-right:1px solid var(--line); min-width:120px;
+}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent); color:#fff; font-weight:600}
+:root[data-theme="dark"] .seg button[aria-pressed="true"],
+:root:not([data-theme="light"]) .seg button[aria-pressed="true"]{color:#10161B}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .seg button[aria-pressed="true"]{color:#fff}}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:13.5px}
+th,td{padding:8px 11px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap}
+th{
+  background:var(--surface-2); font-weight:600; font-size:11.5px; color:var(--ink-2);
+  letter-spacing:.03em; text-transform:uppercase;
+}
+th:first-child,td:first-child{text-align:left; white-space:normal; min-width:190px}
+td.n{font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-size:13px}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--surface-2)}
+tr.sum td{font-weight:700; background:var(--surface-2); border-top:2px solid var(--line-2)}
+tr.sub td{color:var(--ink-2)}
+tr.rule td{background:var(--accent-soft); font-weight:600}
+td .kmbar{display:inline-block;width:3px;height:12px;border-radius:2px;margin-right:7px;vertical-align:-1px}
+.pill{
+  display:inline-block; font-size:11px; font-weight:600; padding:2px 8px; border-radius:99px;
+  background:var(--surface-3); color:var(--ink-2);
+}
+.pill.ok{background:var(--moss-soft); color:var(--moss)}
+.pill.warn{background:var(--amber-soft); color:var(--amber)}
+.pill.bad{background:var(--seal-soft); color:var(--seal)}
+
+/* ---------- KPI ---------- */
+.kpis{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.kpis{grid-template-columns:1fr}}
+.kpi{border:1px solid var(--line); border-radius:9px; padding:12px 14px; background:var(--surface); position:relative; overflow:hidden}
+.kpi::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--accent)}
+.kpi.k2::before{background:var(--moss)} .kpi.k3::before{background:var(--amber)} .kpi.k4::before{background:var(--plum)}
+.kpi .lb{font-size:11.5px; color:var(--ink-3); letter-spacing:.02em}
+.kpi .v{font-family:var(--f-mono); font-size:21px; font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.02em; margin-top:3px}
+.kpi .u{font-size:11.5px; color:var(--ink-3)}
+
+/* ---------- notes / law ---------- */
+.law{
+  border-left:3px solid var(--accent); background:var(--accent-soft); padding:11px 14px;
+  border-radius:0 8px 8px 0; font-size:12.5px; color:var(--ink-2); line-height:1.55;
+}
+.law b{color:var(--ink)}
+.warnbox{border-left:3px solid var(--seal); background:var(--seal-soft); padding:11px 14px; border-radius:0 8px 8px 0; font-size:12.5px; color:var(--ink-2)}
+.formula{
+  font-family:var(--f-mono); font-size:12.5px; background:var(--surface-2); border:1px dashed var(--line-2);
+  border-radius:7px; padding:9px 12px; color:var(--ink-2); overflow-x:auto; white-space:pre-wrap; line-height:1.7;
+}
+
+/* rows editor */
+.rowed{display:flex; flex-direction:column; gap:6px}
+.rw{display:grid; gap:8px; align-items:end; padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--surface-2)}
+.rw:hover{border-color:var(--line-2)}
+.rwops{display:flex; gap:3px; align-items:center}
+.rwops button{
+  border:1px solid var(--line-2); background:var(--surface); color:var(--ink-3); border-radius:6px;
+  width:28px; height:34px; cursor:pointer; font-size:13px; line-height:1; padding:0;
+}
+.rwops button:hover{background:var(--surface-3); color:var(--ink)}
+.rwops button.del:hover{background:var(--seal-soft); color:var(--seal); border-color:var(--seal)}
+.rwops button:disabled{opacity:.3; cursor:default}
+.rwops button:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
+.tbar{display:flex; gap:6px; flex-wrap:wrap; align-items:center; padding:8px 0 10px}
+.tbar .btn{padding:6px 11px; font-size:12.5px}
+.tbar .sepr{width:1px; height:20px; background:var(--line-2); margin:0 3px}
+.tbar .cnt{font-size:12px; color:var(--ink-3); margin-left:auto; font-variant-numeric:tabular-nums}
+.rwidx{
+  font-family:var(--f-mono); font-size:11px; color:var(--ink-3); align-self:center;
+  min-width:22px; text-align:center; padding-bottom:2px;
+}
+
+/* dialog */
+.ovl{
+  position:fixed; inset:0; background:rgba(16,20,25,.55); z-index:80;
+  display:flex; align-items:center; justify-content:center; padding:20px;
+}
+:root[data-theme="dark"] .ovl, :root:not([data-theme="light"]) .ovl{background:rgba(0,0,0,.68)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .ovl{background:rgba(16,20,25,.55)}}
+.dlg{
+  background:var(--surface); border:1px solid var(--line-2); border-radius:12px; box-shadow:var(--shadow);
+  width:min(980px,100%); max-height:92vh; display:flex; flex-direction:column; overflow:hidden;
+}
+.dlg > header{display:flex; align-items:center; gap:12px; padding:14px 18px; border-bottom:1px solid var(--line); background:var(--surface-2)}
+.dlg > header h3{font-size:16px}
+.dlg > header .x{margin-left:auto; border:0; background:transparent; font-size:20px; color:var(--ink-3); cursor:pointer; line-height:1; padding:2px 6px; border-radius:6px}
+.dlg > header .x:hover{background:var(--surface-3); color:var(--ink)}
+.dlg .dbody{padding:16px 18px; overflow-y:auto; display:flex; flex-direction:column; gap:14px}
+.dlg > footer{display:flex; gap:8px; padding:12px 18px; border-top:1px solid var(--line); background:var(--surface-2); flex-wrap:wrap}
+.dlg > footer .sp{margin-left:auto}
+.dlg textarea{min-height:150px; font-family:var(--f-mono); font-size:12.5px; resize:vertical; white-space:pre; overflow-wrap:normal; overflow-x:auto}
+.tabs{display:flex; gap:2px; border-bottom:1px solid var(--line)}
+.tabs button{
+  border:0; background:transparent; padding:9px 14px; font-size:13.5px; color:var(--ink-3); cursor:pointer;
+  border-bottom:2px solid transparent; font-weight:500;
+}
+.tabs button[aria-pressed="true"]{color:var(--accent); border-bottom-color:var(--accent); font-weight:600}
+.tabs button:hover{color:var(--ink)}
+.maprow{display:grid; grid-template-columns:1fr 1fr; gap:8px 14px}
+@media(max-width:640px){.maprow{grid-template-columns:1fr}}
+.prev{max-height:260px; overflow:auto; border:1px solid var(--line); border-radius:8px}
+.prev table{font-size:12.5px}
+.prev td.t{text-align:left; white-space:nowrap}
+.prev td.bad{background:var(--seal-soft); color:var(--seal); font-weight:600}
+.drop{
+  border:2px dashed var(--line-2); border-radius:10px; padding:26px; text-align:center; color:var(--ink-3);
+  font-size:13.5px; cursor:pointer; transition:border-color .15s, background .15s;
+}
+.drop:hover,.drop.over{border-color:var(--accent); background:var(--accent-soft); color:var(--ink-2)}
+input[readonly]{background:var(--surface-2); color:var(--ink-2); cursor:not-allowed}
+
+/* voucher */
+.jv{border:1px solid var(--line); border-radius:8px; overflow:hidden}
+.jv .jvh{padding:9px 13px; background:var(--surface-2); border-bottom:1px solid var(--line); font-size:12.5px; font-weight:600}
+.jv .jl{display:grid; grid-template-columns:60px 1fr 150px; gap:8px; padding:6px 13px; font-size:13px; border-bottom:1px solid var(--line)}
+.jv .jl:last-child{border-bottom:0}
+.jv .jl .dc{font-family:var(--f-mono); font-weight:600}
+.jv .jl.debit .dc{color:var(--seal)}
+.jv .jl.credit{padding-left:34px}
+.jv .jl.credit .dc{color:var(--moss)}
+.jv .jl .amt{text-align:right; font-family:var(--f-mono); font-variant-numeric:tabular-nums}
+
+/* S37 form facsimile */
+.s37{background:var(--surface); border:1.5px solid var(--ink-2); padding:20px; font-size:13px}
+.s37 .hd{display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:14px}
+.s37 .unit{font-size:12px; line-height:1.5}
+.s37 .code{font-size:11px; text-align:right; line-height:1.55; font-family:var(--f-mono)}
+.s37 .ttl{text-align:center; margin:6px 0 14px}
+.s37 .ttl h3{font-size:16px; letter-spacing:.06em; text-transform:uppercase}
+.s37 .ttl .p{font-size:12px; color:var(--ink-2); margin-top:3px}
+.s37 table{font-size:12.5px}
+.s37 th,.s37 td{border:1px solid var(--line-2)}
+.s37 .sig{display:flex; justify-content:space-around; margin-top:22px; text-align:center; font-size:12px; gap:18px; flex-wrap:wrap}
+.s37 .sig div{min-width:150px}
+.s37 .sig b{display:block; font-size:12.5px}
+.s37 .sig i{display:block; color:var(--ink-3); font-size:11px; font-style:italic}
+.s37 .sig .sp{height:52px}
+
+.toast{
+  position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(14px);
+  background:var(--ink); color:var(--paper); padding:10px 18px; border-radius:99px; font-size:13px;
+  opacity:0; pointer-events:none; transition:opacity .2s, transform .2s; z-index:99; box-shadow:var(--shadow);
+}
+.toast.on{opacity:1; transform:translateX(-50%) translateY(0)}
+
+details.acc{border:1px solid var(--line); border-radius:8px; background:var(--surface); overflow:hidden}
+details.acc > summary{padding:10px 14px; cursor:pointer; font-weight:600; font-size:13.5px; background:var(--surface-2); list-style:none; display:flex; align-items:center; gap:8px}
+details.acc > summary::-webkit-details-marker{display:none}
+details.acc > summary::before{content:"▸"; color:var(--accent); transition:transform .15s; display:inline-block}
+details.acc[open] > summary::before{transform:rotate(90deg)}
+details.acc .inner{padding:14px}
+
+.hero-note{font-size:13px; color:var(--ink-2); line-height:1.6; max-width:70ch}
+.mtitle{font-family:var(--f-display); font-size:24px; letter-spacing:-.015em; margin-bottom:2px}
+
+@media print{
+  .rail,.topbar,.noprint{display:none !important}
+  .shell{display:block}
+  .main{padding:0}
+  .card{box-shadow:none; break-inside:avoid; border-color:#999}
+  body{background:#fff; color:#000; font-size:11.5px}
+  .tw{overflow:visible}
+  @page{size:A4; margin:14mm}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important; animation:none !important}}
+</style>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="mark">TT 99/2025</span>
+    <div>
+      <h1>Tính giá thành sản xuất</h1>
+      <div class="sub">Chế độ kế toán doanh nghiệp — TT 99/2025/TT-BTC, hiệu lực 01/01/2026</div>
+    </div>
+  </div>
+  <div class="tb-actions noprint">
+    <button class="btn" id="btnSample">Nạp bài toán mẫu</button>
+    <button class="btn" id="btnClear">Xoá số liệu</button>
+    <button class="btn" id="btnCopy">Sao chép sang Excel</button>
+    <button class="btn" id="btnPrint">In / Lưu PDF</button>
+    <button class="btn ghost" id="btnTheme" title="Đổi giao diện sáng/tối">◐</button>
+  </div>
+</div>
+
+<div class="shell">
+  <aside class="rail noprint">
+    <p class="rail-title">Phương pháp tính giá thành</p>
+    <div class="mlist" id="mlist"></div>
+
+    <p class="rail-title">Đặc điểm doanh nghiệp</p>
+    <div class="rail-box">
+      <label class="chk"><input type="checkbox" id="optXayLap"><span>Doanh nghiệp xây lắp — sử dụng <b>TK 623</b> Chi phí sử dụng máy thi công</span></label>
+      <label class="chk"><input type="checkbox" id="optCongSuat" checked><span>Phân bổ <b>CPSXC cố định</b> theo công suất bình thường (VAS 02)</span></label>
+      <label class="chk"><input type="checkbox" id="optVuotMuc"><span>Có chi phí <b>vượt trên mức bình thường</b> tính thẳng vào TK 632</span></label>
+    </div>
+
+    <p class="rail-title">Cơ sở pháp lý</p>
+    <div class="rail-box" style="font-size:12px;color:var(--ink-2);line-height:1.6">
+      <p style="margin:0 0 8px">• <b>TT 99/2025/TT-BTC</b> — TK 154, 621, 622, 623, 627, 155, 632.</p>
+      <p style="margin:0 0 8px">• <b>VAS 02 — Hàng tồn kho</b>: phân bổ CPSXC cố định theo công suất bình thường.</p>
+      <p style="margin:0 0 8px">• <b>Mẫu S36-DN</b> Sổ chi phí SXKD, <b>S37-DN</b> Thẻ tính giá thành sản phẩm, dịch vụ.</p>
+      <p style="margin:0">• TT 99 <b>bỏ phương pháp kiểm kê định kỳ</b> — không còn TK 611 và TK 631; TK 155 đổi tên thành <b>“Sản phẩm”</b>.</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="stack">
+
+      <section>
+        <div class="mtitle" id="mTitle">Phương pháp giản đơn (trực tiếp)</div>
+        <p class="hero-note" id="mDesc"></p>
+      </section>
+
+      <section class="card">
+        <header><span class="step">Bước 1</span><h2>Kỳ tính giá thành &amp; đối tượng</h2></header>
+        <div class="body">
+          <div class="grid g4">
+            <label class="f"><span class="lb">Tên doanh nghiệp</span><input type="text" id="f_dn" placeholder="Công ty TNHH ..."></label>
+            <label class="f"><span class="lb">Bộ phận / phân xưởng</span><input type="text" id="f_px" placeholder="Phân xưởng số 1"></label>
+            <label class="f"><span class="lb">Kỳ tính giá thành</span><input type="text" id="f_ky" placeholder="Tháng 08/2026"></label>
+            <label class="f"><span class="lb">Đơn vị tính sản phẩm</span><input type="text" id="f_dvt" placeholder="kg / cái / m"></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <header><span class="step">Bước 2</span><h2>Chi phí sản xuất phát sinh trong kỳ</h2>
+          <span class="spacer"></span><span class="pill" id="pillPS">0 đ</span></header>
+        <div class="body" style="display:flex;flex-direction:column;gap:14px">
+          <div class="grid g4" id="costGrid">
+            <label class="f"><span class="lb"><span class="tk k1">621</span>CP nguyên liệu, vật liệu trực tiếp</span><input class="money" type="text" id="c_nvl" value="0"></label>
+            <label class="f"><span class="lb"><span class="tk k2">622</span>CP nhân công trực tiếp</span><input class="money" type="text" id="c_nc" value="0"></label>
+            <label class="f" id="wrapMtc" hidden><span class="lb"><span class="tk k3">623</span>CP sử dụng máy thi công</span><input class="money" type="text" id="c_mtc" value="0"></label>
+            <label class="f"><span class="lb"><span class="tk k4">627</span>CPSX chung — <b>biến đổi</b></span><input class="money" type="text" id="c_sxcbd" value="0"></label>
+            <label class="f"><span class="lb"><span class="tk k4">627</span>CPSX chung — <b>cố định</b></span><input class="money" type="text" id="c_sxccd" value="0"></label>
+          </div>
+
+          <div>
+            <label class="chk"><input type="checkbox" id="optChiTiet"><span>Nhập <b>chi tiết chứng từ chi phí</b> theo từng dòng — ứng dụng tự cộng vào các ô tổng ở trên</span></label>
+            <div id="ctBlock" hidden style="margin-top:8px"><div id="tbl_cpct"></div></div>
+          </div>
+
+          <div id="csBlock">
+            <div class="grid g4">
+              <label class="f"><span class="lb">Công suất bình thường (sản lượng)</span><input class="qty" type="text" id="cs_bt" value="0"><span class="hint">Số lượng SP đạt được ở mức trung bình trong điều kiện sản xuất bình thường.</span></label>
+              <label class="f"><span class="lb">Sản lượng thực tế sản xuất</span><input class="qty" type="text" id="cs_tt" value="0"><span class="hint">Tính theo sản lượng hoàn thành tương đương.</span></label>
+              <div style="grid-column:span 2"><div class="law" id="csNote"></div></div>
+            </div>
+          </div>
+
+          <div id="vmBlock" hidden>
+            <div class="grid g3">
+              <label class="f"><span class="lb"><span class="tk k1">621</span>Vượt mức bình thường → 632</span><input class="money" type="text" id="v_nvl" value="0"></label>
+              <label class="f"><span class="lb"><span class="tk k2">622</span>Vượt mức bình thường → 632</span><input class="money" type="text" id="v_nc" value="0"></label>
+              <label class="f" id="wrapVmtc" hidden><span class="lb"><span class="tk k3">623</span>Vượt mức bình thường → 632</span><input class="money" type="text" id="v_mtc" value="0"></label>
+            </div>
+            <div class="warnbox" style="margin-top:10px">Phần chi phí NVLTT, NCTT, sử dụng máy thi công <b>vượt trên mức bình thường</b> không được tính vào giá thành mà kết chuyển ngay vào <b>TK 632 — Giá vốn hàng bán</b>.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="cardCommon">
+        <header><span class="step">Bước 3</span><h2>Chi phí SXKD dở dang đầu kỳ &amp; đánh giá dở dang cuối kỳ</h2></header>
+        <div class="body" style="display:flex;flex-direction:column;gap:16px">
+          <div>
+            <p class="rail-title" style="margin-left:0">Dở dang đầu kỳ (Dư Nợ TK 154 đầu kỳ, chi tiết theo khoản mục)</p>
+            <div class="grid g4" id="ddkGrid">
+              <label class="f"><span class="lb"><span class="tk k1">621</span>NVL trực tiếp</span><input class="money" type="text" id="d_nvl" value="0"></label>
+              <label class="f"><span class="lb"><span class="tk k2">622</span>Nhân công trực tiếp</span><input class="money" type="text" id="d_nc" value="0"></label>
+              <label class="f" id="wrapDmtc" hidden><span class="lb"><span class="tk k3">623</span>Máy thi công</span><input class="money" type="text" id="d_mtc" value="0"></label>
+              <label class="f"><span class="lb"><span class="tk k4">627</span>Sản xuất chung</span><input class="money" type="text" id="d_sxc" value="0"></label>
+            </div>
+          </div>
+
+          <div>
+            <p class="rail-title" style="margin-left:0">Phương pháp đánh giá sản phẩm dở dang cuối kỳ</p>
+            <div class="seg" id="segWip">
+              <button data-w="nvltt" aria-pressed="true">Theo chi phí NVL trực tiếp</button>
+              <button data-w="tuongduong" aria-pressed="false">Theo sản lượng hoàn thành tương đương</button>
+              <button data-w="dinhmuc" aria-pressed="false">Theo chi phí định mức</button>
+              <button data-w="khong" aria-pressed="false">Không có SP dở dang</button>
+            </div>
+            <div class="grid g4" id="wipGrid" style="margin-top:12px">
+              <label class="f"><span class="lb">Số lượng hoàn thành trong kỳ (Q<sub>ht</sub>)</span><input class="qty" type="text" id="w_qht" value="0"></label>
+              <label class="f"><span class="lb">Số lượng dở dang cuối kỳ (Q<sub>dd</sub>)</span><input class="qty" type="text" id="w_qdd" value="0"></label>
+              <label class="f" id="wrapPct"><span class="lb">Mức độ hoàn thành của SPDD (%)</span><input class="qty" type="text" id="w_pct" value="50"></label>
+              <label class="f" id="wrapBoDan"><span class="lb">NVL chính bỏ vào sản xuất</span>
+                <select id="w_bodan"><option value="0">Bỏ một lần từ đầu quy trình</option><option value="1">Bỏ dần theo mức độ chế biến</option></select></label>
+            </div>
+            <div id="dmGrid" hidden style="margin-top:12px">
+              <p class="hint" style="margin:0 0 8px">Chi phí định mức (kế hoạch) cho một đơn vị sản phẩm, theo từng khoản mục:</p>
+              <div class="grid g4">
+                <label class="f"><span class="lb"><span class="tk k1">621</span>ĐM đơn vị</span><input class="money" type="text" id="dm_nvl" value="0"></label>
+                <label class="f"><span class="lb"><span class="tk k2">622</span>ĐM đơn vị</span><input class="money" type="text" id="dm_nc" value="0"></label>
+                <label class="f" id="wrapDMmtc" hidden><span class="lb"><span class="tk k3">623</span>ĐM đơn vị</span><input class="money" type="text" id="dm_mtc" value="0"></label>
+                <label class="f"><span class="lb"><span class="tk k4">627</span>ĐM đơn vị</span><input class="money" type="text" id="dm_sxc" value="0"></label>
+              </div>
+            </div>
+            <div class="formula" id="wipFormula" style="margin-top:12px"></div>
+          </div>
+
+          <div>
+            <p class="rail-title" style="margin-left:0">Các khoản ghi giảm giá thành</p>
+            <div class="grid g3">
+              <label class="f"><span class="lb">Phế liệu thu hồi nhập kho</span><input class="money" type="text" id="g_phelieu" value="0"></label>
+              <label class="f"><span class="lb">Sản phẩm hỏng không sửa chữa được — bồi thường</span><input class="money" type="text" id="g_sphong" value="0"></label>
+              <label class="f"><span class="lb">Trừ vào khoản mục</span>
+                <select id="g_truvao"><option value="nvl">CP NVL trực tiếp (621)</option><option value="tytrong">Phân bổ theo tỷ trọng các khoản mục</option></select></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="cardMethod">
+        <header><span class="step">Bước 4</span><h2 id="methodBoxTitle">Thông số riêng của phương pháp</h2></header>
+        <div class="body" id="methodBox"></div>
+      </section>
+
+      <section id="results" style="display:flex;flex-direction:column;gap:20px"></section>
+
+    </div>
+  </main>
+</div>
+<div class="ovl" id="imp" hidden>
+  <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="impTitle">
+    <header>
+      <h3 id="impTitle">Nhập dữ liệu hàng loạt</h3>
+      <button class="x" id="impX" title="Đóng" aria-label="Đóng">✕</button>
+    </header>
+    <div class="dbody">
+      <div class="tabs" id="impTabs">
+        <button data-t="paste" aria-pressed="true">Dán từ Excel</button>
+        <button data-t="file" aria-pressed="false">Tải file CSV / Excel</button>
+        <button data-t="tpl" aria-pressed="false">Bảng mẫu</button>
+      </div>
+
+      <div id="pnPaste">
+        <p class="hint" style="margin:0 0 8px">Bôi đen vùng dữ liệu trong Excel, nhấn <b>Ctrl+C</b>, rồi nhấn <b>Ctrl+V</b> vào ô dưới đây. Không cần bỏ tiêu đề — ứng dụng tự nhận biết.</p>
+        <textarea id="impText" placeholder="Dán dữ liệu vào đây…"></textarea>
+      </div>
+
+      <div id="pnFile" hidden>
+        <div class="drop" id="impDrop">
+          <b>Bấm để chọn file</b> hoặc kéo thả vào đây<br>
+          <span style="font-size:12px">Hỗ trợ .csv, .txt và .xlsx (đọc trực tiếp trong trình duyệt, không tải lên máy chủ)</span>
+        </div>
+        <input type="file" id="impFile" accept=".csv,.txt,.xlsx" hidden>
+        <div id="impSheetWrap" hidden style="margin-top:12px">
+          <label class="f" style="max-width:340px"><span class="lb">Chọn sheet trong file Excel</span><select id="impSheet"></select></label>
+        </div>
+      </div>
+
+      <div id="pnTpl" hidden>
+        <p class="hint" style="margin:0 0 8px">Sao chép bảng mẫu dưới đây sang Excel, điền số liệu rồi quay lại dán ở tab <b>Dán từ Excel</b>.</p>
+        <div class="prev" id="impTplPrev"></div>
+      </div>
+
+      <div id="impCfg" hidden style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+          <label class="chk" style="padding:0"><input type="checkbox" id="impHdr" checked><span>Dòng đầu tiên là tiêu đề cột</span></label>
+          <label class="f" style="max-width:190px"><span class="lb">Dấu phân cách</span>
+            <select id="impSep"><option value="auto">Tự nhận biết</option><option value="\t">Tab</option><option value=",">Dấu phẩy (,)</option><option value=";">Chấm phẩy (;)</option><option value="|">Gạch đứng (|)</option></select></label>
+        </div>
+        <div>
+          <p class="rail-title" style="margin:0 0 8px">Ghép cột nguồn với chỉ tiêu của bảng</p>
+          <div class="maprow" id="impMap"></div>
+        </div>
+        <div>
+          <p class="rail-title" style="margin:0 0 8px">Xem trước <span id="impCount" style="text-transform:none;letter-spacing:0"></span></p>
+          <div class="prev" id="impPrev"></div>
+        </div>
+        <div id="impErr"></div>
+      </div>
+    </div>
+    <footer>
+      <button class="btn" id="impCopyTpl" hidden>Sao chép bảng mẫu</button>
+      <span class="sp"></span>
+      <button class="btn" id="impCancel">Huỷ</button>
+      <button class="btn" id="impAppend">Nối thêm vào cuối bảng</button>
+      <button class="btn primary" id="impReplace">Thay thế toàn bộ bảng</button>
+    </footer>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+/* ============================================================
+   TÍNH GIÁ THÀNH SẢN XUẤT — TT 99/2025/TT-BTC
+   ============================================================ */
+"use strict";
+
+/* ---------- khoản mục giá thành ---------- */
+const KM = [
+  { k:'nvl', tk:'621', n:'Chi phí NVL trực tiếp',        s:'CP NVLTT', cls:'k1', col:'var(--accent)' },
+  { k:'nc',  tk:'622', n:'Chi phí nhân công trực tiếp',  s:'CP NCTT',  cls:'k2', col:'var(--moss)'   },
+  { k:'mtc', tk:'623', n:'Chi phí sử dụng máy thi công', s:'CP MTC',   cls:'k3', col:'var(--amber)'  },
+  { k:'sxc', tk:'627', n:'Chi phí sản xuất chung',       s:'CP SXC',   cls:'k4', col:'var(--plum)'   }
+];
+const $  = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const el = id => document.getElementById(id);
+
+let XL = false;                       // doanh nghiệp xây lắp -> dùng 623
+const kms = () => KM.filter(m => m.k !== 'mtc' || XL);
+const zero = () => ({ nvl:0, nc:0, mtc:0, sxc:0 });
+const sum  = o => KM.reduce((t, m) => t + (o[m.k] || 0), 0);
+const addO = (a, b, sg) => { const o = zero(); KM.forEach(m => o[m.k] = (a[m.k]||0) + (sg||1)*(b[m.k]||0)); return o; };
+
+/* ---------- số ---------- */
+function pn(v){
+  if (typeof v === 'number') return isFinite(v) ? v : 0;
+  if (v === undefined || v === null) return 0;
+  let s = String(v).trim().replace(/\s| /g, '');
+  if (!s) return 0;
+  if (s.indexOf(',') > -1) s = s.replace(/\./g, '').replace(',', '.');
+  else if (/^-?\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '');
+  const n = parseFloat(s);
+  return isFinite(n) ? n : 0;
+}
+const fm  = (n, d) => (isFinite(n) ? n : 0).toLocaleString('vi-VN', { minimumFractionDigits:d||0, maximumFractionDigits:d||0 });
+const fmz = n => fm(Math.round(n || 0));
+const fmd = n => fm(n || 0, 2);                                  // 2 số lẻ (giá thành đơn vị)
+const fq  = n => (Math.abs((n||0) % 1) > 1e-9 ? fm(n, 2) : fm(n));
+const V   = id => pn(el(id) ? el(id).value : 0);
+const T   = id => (el(id) ? el(id).value.trim() : '');
+const setV = (id, v) => { if (el(id)) el(id).value = (typeof v === 'number') ? fq(v) : v; };
+
+/* ---------- toast ---------- */
+let tmr;
+function toast(msg){
+  const t = el('toast'); t.textContent = msg; t.classList.add('on');
+  clearTimeout(tmr); tmr = setTimeout(() => t.classList.remove('on'), 2200);
+}
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const S = {
+  method: 'giandon',
+  heso:    [],
+  tyle:    [],
+  spphu:   [],
+  buoc:    [],
+  donhang: [],
+  cpct:    [],
+  qChinh: 0, truSPPhu: 'tytrong',
+  qTP: 0, dhTieuThuc: 'giomay',
+  dmQ: 0, dmU: zero(), dmCL: zero()
+};
+
+/* ============================================================
+   ĐỊNH NGHĨA CÁC PHƯƠNG PHÁP
+   ============================================================ */
+const METHODS = [
+{
+  id:'giandon', nm:'Giản đơn (trực tiếp)',
+  ds:'Một loại sản phẩm, quy trình khép kín',
+  desc:'Áp dụng cho doanh nghiệp có quy trình công nghệ giản đơn, khép kín, sản xuất một hoặc ít loại sản phẩm với khối lượng lớn, chu kỳ sản xuất ngắn (điện, nước, khai thác, chế biến đơn giản). Toàn bộ chi phí tập hợp trên TK 154 được tính thẳng cho sản phẩm hoàn thành.',
+  uses:{ costs:true, wip:true }
+},
+{
+  id:'heso', nm:'Hệ số',
+  ds:'Một quy trình → nhiều SP, có hệ số quy đổi',
+  desc:'Áp dụng khi cùng một quy trình sản xuất, cùng loại nguyên liệu và lượng lao động nhưng thu được đồng thời nhiều loại sản phẩm chính khác nhau (hoá dầu, hoá chất, chăn nuôi). Chi phí không tập hợp riêng được cho từng sản phẩm nên phải quy đổi tất cả về sản phẩm tiêu chuẩn theo hệ số kinh tế — kỹ thuật.',
+  uses:{ costs:true, wip:true }
+},
+{
+  id:'tyle', nm:'Tỷ lệ',
+  ds:'Cùng loại SP, khác quy cách, phẩm cấp',
+  desc:'Áp dụng khi cùng một quy trình sản xuất tạo ra nhóm sản phẩm cùng loại nhưng khác nhau về quy cách, kích cỡ, phẩm cấp (may mặc, giày dép, cơ khí tiêu chuẩn). Lấy giá thành kế hoạch (hoặc định mức) làm tiêu chuẩn phân bổ, sau đó xác định tỷ lệ giữa chi phí thực tế và tiêu chuẩn cho từng khoản mục.',
+  uses:{ costs:true, wip:true }
+},
+{
+  id:'loaitru', nm:'Loại trừ chi phí sản phẩm phụ',
+  ds:'Quy trình cho ra SP chính kèm SP phụ',
+  desc:'Áp dụng khi cùng một quy trình sản xuất, ngoài sản phẩm chính còn thu được sản phẩm phụ có giá trị đáng kể (đường — rỉ mật, xay xát — cám, gỗ — dăm bào). Giá trị sản phẩm phụ được loại trừ khỏi tổng chi phí trước khi tính giá thành sản phẩm chính.',
+  uses:{ costs:true, wip:true }
+},
+{
+  id:'pb_ntp', nm:'Phân bước có tính giá thành NTP',
+  ds:'Kết chuyển tuần tự — dệt, luyện kim, giấy',
+  desc:'Áp dụng cho quy trình công nghệ phức tạp kiểu liên tục, gồm nhiều giai đoạn chế biến kế tiếp, nửa thành phẩm (NTP) của giai đoạn trước là đối tượng chế biến của giai đoạn sau và có thể bán ra ngoài. Giá thành NTP được kết chuyển tuần tự sang giai đoạn sau.',
+  uses:{ costs:false, wip:false }
+},
+{
+  id:'pb_kntp', nm:'Phân bước không tính giá thành NTP',
+  ds:'Kết chuyển song song',
+  desc:'Cũng áp dụng cho quy trình nhiều giai đoạn nhưng doanh nghiệp không có nhu cầu tính giá thành nửa thành phẩm. Kế toán xác định phần chi phí của từng giai đoạn nằm trong thành phẩm, sau đó kết chuyển song song để tổng hợp thành giá thành thành phẩm.',
+  uses:{ costs:false, wip:false }
+},
+{
+  id:'donhang', nm:'Đơn đặt hàng',
+  ds:'Sản xuất đơn chiếc, theo hợp đồng, xây lắp',
+  desc:'Áp dụng cho sản xuất đơn chiếc hoặc hàng loạt nhỏ theo đơn đặt hàng, công trình xây lắp. Chi phí trực tiếp tập hợp riêng cho từng đơn hàng; chi phí sản xuất chung phân bổ theo tiêu thức phù hợp. Đơn hàng chưa hoàn thành đến cuối kỳ toàn bộ chi phí là sản phẩm dở dang.',
+  uses:{ costs:'sxconly', wip:false }
+},
+{
+  id:'dinhmuc', nm:'Định mức',
+  ds:'Kiểm soát chênh lệch theo định mức',
+  desc:'Áp dụng ở doanh nghiệp đã xây dựng được hệ thống định mức kinh tế — kỹ thuật ổn định. Giá thành thực tế được phân tích thành ba bộ phận: giá thành định mức, chênh lệch do thay đổi định mức và chênh lệch do thoát ly định mức, phục vụ kiểm soát chi phí thường xuyên.',
+  uses:{ costs:true, wip:true }
+}
+];
+const M = id => METHODS.find(m => m.id === id);
+
+/* ============================================================
+   ĐỌC DỮ LIỆU CHUNG
+   ============================================================ */
+function readBase(){
+  const raw = {
+    nvl: V('c_nvl'), nc: V('c_nc'), mtc: XL ? V('c_mtc') : 0,
+    sxcBd: V('c_sxcbd'), sxcCd: V('c_sxccd')
+  };
+  const useCS = el('optCongSuat').checked;
+  const qbt = V('cs_bt'), qtt = V('cs_tt');
+  let alloc = raw.sxcCd, unalloc = 0, thieuCS = false;
+  if (useCS && qbt > 0 && qtt > 0 && qtt < qbt){
+    alloc = raw.sxcCd * qtt / qbt; unalloc = raw.sxcCd - alloc; thieuCS = true;
+  }
+  const over = el('optVuotMuc').checked
+    ? { nvl:V('v_nvl'), nc:V('v_nc'), mtc: XL ? V('v_mtc') : 0, sxc:0 }
+    : zero();
+  const C = {
+    nvl: raw.nvl - over.nvl,
+    nc:  raw.nc  - over.nc,
+    mtc: raw.mtc - over.mtc,
+    sxc: raw.sxcBd + alloc
+  };
+  const ddk = { nvl:V('d_nvl'), nc:V('d_nc'), mtc: XL ? V('d_mtc') : 0, sxc:V('d_sxc') };
+  return { raw, C, over, ddk, alloc, unalloc, thieuCS, useCS, qbt, qtt,
+           tong632: sum(over) + unalloc };
+}
+
+function readWip(){
+  return {
+    mode: $('#segWip button[aria-pressed="true"]').dataset.w,
+    qht: V('w_qht'), qdd: V('w_qdd'), pct: V('w_pct'),
+    boDan: el('w_bodan').value === '1',
+    dm: { nvl:V('dm_nvl'), nc:V('dm_nc'), mtc: XL ? V('dm_mtc') : 0, sxc:V('dm_sxc') }
+  };
+}
+
+/* Đánh giá SPDD cuối kỳ theo 3 phương pháp */
+function evalWip(ddk, C, w){
+  const out = zero(); const st = [];
+  if (w.mode === 'khong' || w.qdd <= 0) return { out, st };
+  const e = w.qdd * (w.pct / 100);
+  const qNvl = w.boDan ? e : w.qdd;
+
+  if (w.mode === 'nvltt'){
+    const den = w.qht + qNvl;
+    if (den > 0){
+      out.nvl = (ddk.nvl + C.nvl) * qNvl / den;
+      st.push(`D<sub>ck</sub>(621) = (${fmz(ddk.nvl)} + ${fmz(C.nvl)}) ÷ (${fq(w.qht)} + ${fq(qNvl)}) × ${fq(qNvl)} = <b>${fmz(out.nvl)}</b>`);
+    }
+    st.push('Các khoản mục 622' + (XL ? ', 623' : '') + ', 627 không đánh giá dở dang — tính hết cho sản phẩm hoàn thành.');
+  }
+  else if (w.mode === 'tuongduong'){
+    let den = w.qht + qNvl;
+    if (den > 0){
+      out.nvl = (ddk.nvl + C.nvl) * qNvl / den;
+      st.push(`D<sub>ck</sub>(621) = (${fmz(ddk.nvl)} + ${fmz(C.nvl)}) ÷ (${fq(w.qht)} + ${fq(qNvl)}) × ${fq(qNvl)} = <b>${fmz(out.nvl)}</b>`);
+    }
+    den = w.qht + e;
+    if (den > 0){
+      kms().filter(m => m.k !== 'nvl').forEach(m => {
+        out[m.k] = (ddk[m.k] + C[m.k]) * e / den;
+        st.push(`D<sub>ck</sub>(${m.tk}) = (${fmz(ddk[m.k])} + ${fmz(C[m.k])}) ÷ (${fq(w.qht)} + ${fq(e)}) × ${fq(e)} = <b>${fmz(out[m.k])}</b>`);
+      });
+    }
+  }
+  else if (w.mode === 'dinhmuc'){
+    out.nvl = qNvl * w.dm.nvl;
+    st.push(`D<sub>ck</sub>(621) = ${fq(qNvl)} × ${fmz(w.dm.nvl)} = <b>${fmz(out.nvl)}</b>`);
+    kms().filter(m => m.k !== 'nvl').forEach(m => {
+      out[m.k] = e * w.dm[m.k];
+      st.push(`D<sub>ck</sub>(${m.tk}) = ${fq(e)} × ${fmz(w.dm[m.k])} = <b>${fmz(out[m.k])}</b>`);
+    });
+  }
+  return { out, st };
+}
+
+/* Các khoản ghi giảm giá thành */
+function readGiam(pool){
+  const tong = V('g_phelieu') + V('g_sphong');
+  const g = zero();
+  if (tong <= 0) return { g, tong, phelieu:V('g_phelieu'), sphong:V('g_sphong') };
+  if (el('g_truvao').value === 'nvl') g.nvl = tong;
+  else {
+    const t = sum(pool);
+    if (t > 0) kms().forEach(m => g[m.k] = tong * (pool[m.k] || 0) / t);
+    else g.nvl = tong;
+  }
+  return { g, tong, phelieu:V('g_phelieu'), sphong:V('g_sphong') };
+}
+
+/* Chuỗi tính chuẩn: DDĐK + PS - DDCK - Giảm = Tổng giá thành */
+function pipeline(){
+  const b = readBase();
+  const w = readWip();
+  const wp = evalWip(b.ddk, b.C, w);
+  const truoc = addO(addO(b.ddk, b.C), wp.out, -1);
+  const gi = readGiam(truoc);
+  const Z = addO(truoc, gi.g, -1);
+  return { b, w, wip:wp.out, wipSteps:wp.st, giam:gi, Z, qht:w.qht };
+}
+
+/* ============================================================
+   HTML HELPERS
+   ============================================================ */
+function card(title, step, inner, extra){
+  return `<section class="card"><header>${step ? `<span class="step">${step}</span>` : ''}<h2>${title}</h2>${extra ? `<span class="spacer"></span>${extra}` : ''}</header><div class="body" style="display:flex;flex-direction:column;gap:14px">${inner}</div></section>`;
+}
+function tbl(head, rows, cls){
+  return `<div class="tw"><table${cls ? ` class="${cls}"` : ''}><thead><tr>${head.map((h,i) => `<th${i ? '' : ''}>${h}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+function tr(cells, cls){
+  return `<tr${cls ? ` class="${cls}"` : ''}>${cells.map((c,i) => i === 0 ? `<td>${c}</td>` : `<td class="n">${c}</td>`).join('')}</tr>`;
+}
+const kmBar = m => `<span class="kmbar" style="background:${m.col}"></span>`;
+const kmHead = () => kms().map(m => `${m.s}<br><span style="font-weight:400;text-transform:none;color:var(--ink-3)">TK ${m.tk}</span>`);
+const kmCells = o => kms().map(m => fmz(o[m.k] || 0));
+
+/* ============================================================
+   KHỐI KẾT QUẢ DÙNG CHUNG
+   ============================================================ */
+function blockChiPhi(b){
+  const rows = [];
+  rows.push(tr([`${kmBar(KM[0])}Chi phí NVL trực tiếp (TK 621)`, fmz(b.raw.nvl), fmz(b.over.nvl), fmz(b.C.nvl)]));
+  rows.push(tr([`${kmBar(KM[1])}Chi phí nhân công trực tiếp (TK 622)`, fmz(b.raw.nc), fmz(b.over.nc), fmz(b.C.nc)]));
+  if (XL) rows.push(tr([`${kmBar(KM[2])}Chi phí sử dụng máy thi công (TK 623)`, fmz(b.raw.mtc), fmz(b.over.mtc), fmz(b.C.mtc)]));
+  rows.push(tr([`${kmBar(KM[3])}CPSX chung biến đổi (TK 627)`, fmz(b.raw.sxcBd), '—', fmz(b.raw.sxcBd)], 'sub'));
+  rows.push(tr([`${kmBar(KM[3])}CPSX chung cố định (TK 627)`, fmz(b.raw.sxcCd), fmz(b.unalloc), fmz(b.alloc)], 'sub'));
+  rows.push(tr(['<b>Cộng chi phí sản xuất trong kỳ</b>',
+    fmz(b.raw.nvl + b.raw.nc + b.raw.mtc + b.raw.sxcBd + b.raw.sxcCd),
+    fmz(b.tong632), fmz(sum(b.C))], 'sum'));
+
+  let note = '';
+  if (b.useCS && b.qbt > 0 && b.qtt > 0){
+    note = b.thieuCS
+      ? `<div class="warnbox"><b>Sản lượng thực tế thấp hơn công suất bình thường</b> (${fq(b.qtt)} &lt; ${fq(b.qbt)}). Theo VAS 02 và TT 99/2025, chi phí sản xuất chung cố định chỉ được phân bổ vào giá thành theo mức công suất bình thường:<div class="formula" style="margin-top:8px">CPSXC cố định phân bổ = ${fmz(b.raw.sxcCd)} × ${fq(b.qtt)} ÷ ${fq(b.qbt)} = ${fmz(b.alloc)}
+CPSXC cố định KHÔNG phân bổ = ${fmz(b.unalloc)}  →  ghi Nợ TK 632</div></div>`
+      : `<div class="law">Sản lượng thực tế (${fq(b.qtt)}) <b>đạt hoặc vượt</b> công suất bình thường (${fq(b.qbt)}) — toàn bộ chi phí sản xuất chung cố định được phân bổ vào chi phí chế biến theo chi phí thực tế phát sinh.</div>`;
+  }
+  return card('Tập hợp chi phí sản xuất và phân bổ chi phí sản xuất chung', 'Kết quả 1',
+    tbl(['Khoản mục chi phí', 'Phát sinh trong kỳ', 'Vượt mức / không phân bổ → TK 632', 'Tính vào giá thành (Nợ TK 154)'], rows.join('')) + note);
+}
+
+function blockSPDD(r){
+  if (r.w.mode === 'khong' || r.w.qdd <= 0)
+    return card('Đánh giá sản phẩm dở dang cuối kỳ', 'Kết quả 2',
+      '<div class="law">Kỳ này không có sản phẩm dở dang cuối kỳ — toàn bộ chi phí được tính hết cho sản phẩm hoàn thành.</div>');
+  const names = { nvltt:'Theo chi phí nguyên liệu, vật liệu trực tiếp', tuongduong:'Theo sản lượng hoàn thành tương đương', dinhmuc:'Theo chi phí định mức' };
+  const rows = kms().map(m => tr([`${kmBar(m)}${m.n} (TK ${m.tk})`, fmz(r.b.ddk[m.k]), fmz(r.b.C[m.k]), fmz(r.wip[m.k])])).join('')
+    + tr(['<b>Cộng</b>', fmz(sum(r.b.ddk)), fmz(sum(r.b.C)), fmz(sum(r.wip))], 'sum');
+  return card('Đánh giá sản phẩm dở dang cuối kỳ', 'Kết quả 2',
+    `<div class="law"><b>Phương pháp áp dụng:</b> ${names[r.w.mode]}. Số lượng hoàn thành ${fq(r.w.qht)} — dở dang ${fq(r.w.qdd)}, mức độ hoàn thành ${fq(r.w.pct)}%.</div>`
+    + tbl(['Khoản mục', 'Dở dang đầu kỳ', 'Phát sinh trong kỳ', 'Dở dang cuối kỳ'], rows)
+    + `<div class="formula">${r.wipSteps.join('\n')}</div>`);
+}
+
+function blockZ(r, tenSP, q, extraRows){
+  const rows = [];
+  rows.push(tr(['Chi phí SXKD dở dang đầu kỳ', ...kmCells(r.b.ddk), fmz(sum(r.b.ddk))]));
+  rows.push(tr(['Chi phí SXKD phát sinh trong kỳ', ...kmCells(r.b.C), fmz(sum(r.b.C))]));
+  rows.push(tr(['Trừ: Chi phí SXKD dở dang cuối kỳ', ...kmCells(r.wip).map(x => '(' + x + ')'), '(' + fmz(sum(r.wip)) + ')'], 'sub'));
+  if (r.giam.tong > 0) rows.push(tr(['Trừ: Các khoản ghi giảm giá thành', ...kmCells(r.giam.g).map(x => '(' + x + ')'), '(' + fmz(r.giam.tong) + ')'], 'sub'));
+  if (extraRows) rows.push(extraRows);
+  rows.push(tr([`<b>Tổng giá thành sản xuất — ${tenSP || 'sản phẩm'}</b>`, ...kmCells(r.Z), fmz(sum(r.Z))], 'sum'));
+  if (q > 0) rows.push(tr(['<b>Giá thành đơn vị</b>', ...kms().map(m => fmd(r.Z[m.k] / q)), fmd(sum(r.Z) / q)], 'rule'));
+  return tbl(['Chỉ tiêu', ...kmHead(), 'Tổng cộng'], rows.join(''));
+}
+
+function blockButToan(r, tongZ){
+  const b = r.b; const L = [];
+  const line = (t, arr) => `<div class="jv"><div class="jvh">${t}</div>${arr.map(x =>
+    `<div class="jl ${x[0] === 'N' ? 'debit' : 'credit'}"><span class="dc">${x[0] === 'N' ? 'Nợ' : 'Có'}</span><span>TK ${x[1]} — ${x[2]}</span><span class="amt">${fmz(x[3])}</span></div>`).join('')}</div>`;
+
+  if (b.raw.nvl > 0){
+    const a = [['N','154','Chi phí SXKD dở dang', b.C.nvl]];
+    if (b.over.nvl > 0) a.push(['N','632','Giá vốn hàng bán (vượt mức bình thường)', b.over.nvl]);
+    a.push(['C','621','Chi phí NVL trực tiếp', b.raw.nvl]);
+    L.push(line('1. Kết chuyển chi phí nguyên liệu, vật liệu trực tiếp', a));
+  }
+  if (b.raw.nc > 0){
+    const a = [['N','154','Chi phí SXKD dở dang', b.C.nc]];
+    if (b.over.nc > 0) a.push(['N','632','Giá vốn hàng bán (vượt mức bình thường)', b.over.nc]);
+    a.push(['C','622','Chi phí nhân công trực tiếp', b.raw.nc]);
+    L.push(line('2. Kết chuyển chi phí nhân công trực tiếp', a));
+  }
+  if (XL && b.raw.mtc > 0){
+    const a = [['N','154','Chi phí SXKD dở dang', b.C.mtc]];
+    if (b.over.mtc > 0) a.push(['N','632','Giá vốn hàng bán (vượt mức bình thường)', b.over.mtc]);
+    a.push(['C','623','Chi phí sử dụng máy thi công', b.raw.mtc]);
+    L.push(line('3. Kết chuyển chi phí sử dụng máy thi công', a));
+  }
+  const sxcPS = b.raw.sxcBd + b.raw.sxcCd;
+  if (sxcPS > 0){
+    const a = [['N','154','Chi phí SXKD dở dang', b.C.sxc]];
+    if (b.unalloc > 0) a.push(['N','632','Giá vốn hàng bán (CPSXC cố định không phân bổ)', b.unalloc]);
+    a.push(['C','627','Chi phí sản xuất chung', sxcPS]);
+    L.push(line('4. Phân bổ và kết chuyển chi phí sản xuất chung', a));
+  }
+  if (r.giam.phelieu > 0)
+    L.push(line('5. Phế liệu thu hồi nhập kho', [['N','152','Nguyên liệu, vật liệu', r.giam.phelieu], ['C','154','Chi phí SXKD dở dang', r.giam.phelieu]]));
+  if (r.giam.sphong > 0)
+    L.push(line('6. Sản phẩm hỏng không sửa chữa được — người gây thiệt hại bồi thường', [['N','138','Phải thu khác (1388) / TK 334', r.giam.sphong], ['C','154','Chi phí SXKD dở dang', r.giam.sphong]]));
+  L.push(line('7. Giá thành sản xuất thực tế của sản phẩm hoàn thành nhập kho',
+    [['N','155','Sản phẩm', tongZ], ['C','154','Chi phí SXKD dở dang', tongZ]]));
+
+  const dNo = sum(b.C), dCo = r.giam.tong + tongZ;
+  const ddck = sum(b.ddk) + dNo - dCo;
+  const chk = tbl(['Tài khoản 154 — Chi phí SXKD dở dang', 'Số tiền'],
+    tr(['Dư Nợ đầu kỳ', fmz(sum(b.ddk))]) +
+    tr(['Phát sinh Nợ trong kỳ (kết chuyển 621, 622' + (XL ? ', 623' : '') + ', 627)', fmz(dNo)]) +
+    tr(['Phát sinh Có trong kỳ (giảm giá thành + nhập kho thành phẩm)', fmz(dCo)]) +
+    tr(['<b>Dư Nợ cuối kỳ — chi phí SXKD dở dang</b>', fmz(ddck)], 'sum'));
+
+  const okv = Math.abs(ddck - sum(r.wip)) < 1;
+  const badge = okv
+    ? `<span class="pill ok">Cân đối ✓ khớp với SPDD cuối kỳ ${fmz(sum(r.wip))}</span>`
+    : `<span class="pill bad">Lệch ${fmz(ddck - sum(r.wip))}</span>`;
+
+  return card('Bút toán hạch toán và kiểm tra cân đối TK 154', 'Kết quả 5',
+    L.join('') + chk, badge);
+}
+
+function blockS37(r, spName, q, tongZ){
+  const rows = [];
+  const line = (t, o, tot) => `<tr><td>${t}</td><td class="n">${fmz(tot)}</td>${kms().map(m => `<td class="n">${fmz(o[m.k]||0)}</td>`).join('')}</tr>`;
+  rows.push(line('A. Chi phí SXKD dở dang đầu kỳ', r.b.ddk, sum(r.b.ddk)));
+  rows.push(line('B. Chi phí SXKD phát sinh trong kỳ', r.b.C, sum(r.b.C)));
+  if (r.giam.tong > 0) rows.push(line('C. Các khoản ghi giảm giá thành', r.giam.g, r.giam.tong));
+  rows.push(`<tr class="sum">${['D. Giá thành sản phẩm, dịch vụ trong kỳ'].map(x => `<td>${x}</td>`).join('')}<td class="n">${fmz(tongZ)}</td>${kms().map(m => `<td class="n">${fmz(r.Z[m.k]||0)}</td>`).join('')}</tr>`);
+  rows.push(line('Đ. Chi phí SXKD dở dang cuối kỳ', r.wip, sum(r.wip)));
+  const inner = `<div class="s37">
+    <div class="hd">
+      <div class="unit"><b>Đơn vị:</b> ${T('f_dn') || '.....................'}<br><b>Bộ phận:</b> ${T('f_px') || '.....................'}</div>
+      <div class="code"><b>Mẫu số S37-DN</b><br>(Ban hành theo Thông tư số 99/2025/TT-BTC<br>ngày 19/11/2025 của Bộ Tài chính)</div>
+    </div>
+    <div class="ttl"><h3>Thẻ tính giá thành sản phẩm, dịch vụ</h3>
+      <div class="p">${T('f_ky') || 'Kỳ ............'}</div>
+      <div class="p">Tên sản phẩm, dịch vụ: <b>${spName || '............'}</b> — Số lượng: <b>${fq(q)}</b> ${T('f_dvt') || ''}</div>
+    </div>
+    <table><thead><tr><th>Chỉ tiêu</th><th>Tổng số tiền</th>${kms().map(m => `<th>TK ${m.tk}<br>${m.s}</th>`).join('')}</tr></thead>
+    <tbody>${rows.join('')}</tbody></table>
+    <div style="text-align:right;font-size:12px;margin-top:10px">Giá thành đơn vị: <b>${q > 0 ? fmd(tongZ / q) : '—'}</b> đ/${T('f_dvt') || 'đvsp'}</div>
+    <div class="sig">
+      <div><b>Người lập biểu</b><i>(Ký, họ tên)</i><div class="sp"></div></div>
+      <div><b>Kế toán trưởng</b><i>(Ký, họ tên)</i><div class="sp"></div></div>
+      <div><b>Giám đốc</b><i>(Ký, họ tên, đóng dấu)</i><div class="sp"></div></div>
+    </div>
+  </div>`;
+  return card('Thẻ tính giá thành sản phẩm, dịch vụ — Mẫu số S37-DN', 'Kết quả 6', inner);
+}
+
+function kpis(items){
+  return `<div class="kpis">${items.map((x,i) => `<div class="kpi k${(i%4)+1}"><div class="lb">${x[0]}</div><div class="v">${x[1]}</div><div class="u">${x[2] || ''}</div></div>`).join('')}</div>`;
+}
+
+/* ============================================================
+   RENDER Ô NHẬP LIỆU RIÊNG THEO PHƯƠNG PHÁP
+   ============================================================ */
+function renderMethodBox(){
+  const id = S.method, box = el('methodBox');
+  const K = kms();
+  if (id === 'giandon'){
+    box.innerHTML = `<div class="grid g2">
+      <label class="f"><span class="lb">Tên sản phẩm</span><input type="text" id="gd_ten" placeholder="Sản phẩm A"></label>
+      <div class="law">Toàn bộ chi phí tập hợp trên TK 154 sau khi trừ dở dang cuối kỳ và các khoản giảm giá thành được tính thẳng cho khối lượng sản phẩm hoàn thành ở <b>Bước 3</b>.</div></div>`;
+  }
+  else if (id === 'heso'){
+    box.innerHTML = `<p class="hint">Khai báo các sản phẩm chính thu được từ cùng một quy trình và hệ số quy đổi về sản phẩm tiêu chuẩn.</p>
+      <div id="tbl_heso"></div>
+      <div class="law" style="margin-top:10px">Sản lượng hoàn thành ở <b>Bước 3</b> phải nhập theo <b>sản phẩm tiêu chuẩn</b> (tổng sản lượng quy đổi) để đánh giá dở dang nhất quán. Ứng dụng tự đề xuất giá trị này bên dưới.</div>`;
+    renderTable('heso', 'tbl_heso');
+  }
+  else if (id === 'tyle'){
+    box.innerHTML = `<p class="hint">Khai báo từng quy cách sản phẩm kèm <b>giá thành kế hoạch (định mức) đơn vị</b> theo từng khoản mục — dùng làm tiêu chuẩn phân bổ.</p>
+      <div id="tbl_tyle"></div>`;
+    renderTable('tyle', 'tbl_tyle');
+  }
+  else if (id === 'loaitru'){
+    box.innerHTML = `<div class="grid g2">
+      <label class="f"><span class="lb">Tên sản phẩm chính</span><input type="text" id="lt_ten" placeholder="Đường RS"></label>
+      <label class="f"><span class="lb">Loại trừ giá trị SP phụ theo</span>
+        <select id="lt_tru"><option value="tytrong">Phân bổ theo tỷ trọng từng khoản mục</option><option value="nvl">Trừ hết vào khoản mục 621</option></select></label></div>
+      <p class="hint" style="margin-top:12px">Sản phẩm phụ được đánh giá theo giá bán ước tính trừ lợi nhuận định mức (hoặc theo giá kế hoạch).</p>
+      <div id="tbl_spphu"></div>`;
+    renderTable('spphu', 'tbl_spphu');
+    el('lt_tru').value = S.truSPPhu;
+    el('lt_tru').onchange = e => { S.truSPPhu = e.target.value; compute(); };
+    el('lt_ten').oninput = compute;
+  }
+  else if (id === 'pb_ntp' || id === 'pb_kntp'){
+    const kntp = (id === 'pb_kntp');
+    box.innerHTML = `<div class="law">${kntp
+      ? 'Kết chuyển <b>song song</b>: xác định phần chi phí của mỗi giai đoạn nằm trong thành phẩm rồi cộng lại. Không tính giá thành nửa thành phẩm.'
+      : 'Kết chuyển <b>tuần tự</b>: giá thành nửa thành phẩm của giai đoạn trước được chuyển toàn bộ sang giai đoạn sau như một khoản mục chi phí riêng.'}</div>
+      ${kntp ? `<label class="f" style="max-width:280px"><span class="lb">Số lượng thành phẩm hoàn thành (Q<sub>TP</sub>)</span><input class="qty" type="text" id="pb_qtp" value="${fq(S.qTP)}"></label>` : ''}
+      <div id="tb_buoc"></div>
+      <div id="buocWrap" style="display:flex;flex-direction:column;gap:12px"></div>`;
+    if (kntp) el('pb_qtp').oninput = e => { S.qTP = pn(e.target.value); compute(); };
+    el('tb_buoc').innerHTML = toolbarHTML('buoc');
+    bindToolbar(el('tb_buoc'));
+    drawBuoc(kntp);
+  }
+  else if (id === 'donhang'){
+    box.innerHTML = `<div class="grid g2">
+      <label class="f"><span class="lb">Tiêu thức phân bổ chi phí sản xuất chung (TK 627)</span>
+        <select id="dh_tt">
+          <option value="giomay">Số giờ máy chạy</option>
+          <option value="giocong">Số giờ công trực tiếp</option>
+          <option value="nc">Chi phí nhân công trực tiếp</option>
+          <option value="nvl">Chi phí nguyên vật liệu trực tiếp</option>
+          <option value="tructiep">Tổng chi phí trực tiếp</option>
+        </select></label>
+      <div class="law">Chi phí sản xuất chung nhập ở <b>Bước 2</b> được phân bổ cho tất cả đơn hàng thi công trong kỳ (kể cả đơn chưa hoàn thành) theo tiêu thức đã chọn.</div></div>
+      <div id="tbl_donhang" style="margin-top:12px"></div>`;
+    renderTable('donhang', 'tbl_donhang');
+    el('dh_tt').value = S.dhTieuThuc;
+    el('dh_tt').onchange = e => { S.dhTieuThuc = e.target.value; compute(); };
+  }
+  else if (id === 'dinhmuc'){
+    box.innerHTML = `<div class="grid g2">
+      <label class="f"><span class="lb">Tên sản phẩm</span><input type="text" id="dm_ten" placeholder="Sản phẩm A"></label>
+      <label class="f"><span class="lb">Số lượng sản phẩm hoàn thành</span><input class="qty" type="text" id="dm_q" value="${fq(S.dmQ)}"></label></div>
+      <p class="rail-title" style="margin:14px 0 6px 0">Giá thành định mức đơn vị sản phẩm</p>
+      <div class="grid g4">${K.map(m => `<label class="f"><span class="lb"><span class="tk ${m.cls}">${m.tk}</span>ĐM/đv</span><input class="money" type="text" id="dmu_${m.k}" value="${fq(S.dmU[m.k])}"></label>`).join('')}</div>
+      <p class="rail-title" style="margin:14px 0 6px 0">Chênh lệch do <b>thay đổi định mức</b> trong kỳ (+ tăng / − giảm)</p>
+      <div class="grid g4">${K.map(m => `<label class="f"><span class="lb"><span class="tk ${m.cls}">${m.tk}</span>CL thay đổi ĐM</span><input class="money" type="text" id="dmc_${m.k}" value="${fq(S.dmCL[m.k])}"></label>`).join('')}</div>
+      <div class="law" style="margin-top:12px">Chênh lệch do <b>thoát ly định mức</b> được ứng dụng tự xác định bằng: Giá thành thực tế (tính theo chuỗi Bước 2 – Bước 3) − Giá thành định mức − Chênh lệch do thay đổi định mức.</div>`;
+    el('dm_q').oninput = e => { S.dmQ = pn(e.target.value); compute(); };
+    K.forEach(m => {
+      el('dmu_' + m.k).oninput = e => { S.dmU[m.k] = pn(e.target.value); compute(); };
+      el('dmc_' + m.k).oninput = e => { S.dmCL[m.k] = pn(e.target.value); compute(); };
+    });
+    el('dm_ten').oninput = compute;
+  }
+  $$('#methodBox input[type=text]').forEach(i => { if (!i.dataset.k) i.addEventListener('input', compute); });
+}
+
+function drawBuoc(kntp){
+  const tb = el('tb_buoc'); if (tb){ tb.innerHTML = toolbarHTML('buoc'); bindToolbar(tb); }
+  const wrap = el('buocWrap'); if (!wrap) return;
+  const K = kms();
+  wrap.innerHTML = S.buoc.map((b, i) => `<details class="acc" open>
+    <summary>Giai đoạn ${i + 1}${b.ten ? ' — ' + b.ten : ''}
+      <span class="rwops" style="margin-left:auto">
+        <button data-mvb="-1" data-i="${i}" title="Lên trên" ${i === 0 ? 'disabled' : ''}>↑</button>
+        <button data-mvb="1"  data-i="${i}" title="Xuống dưới" ${i === S.buoc.length - 1 ? 'disabled' : ''}>↓</button>
+        <button data-dupb="${i}" title="Nhân bản giai đoạn">⧉</button>
+        <button class="del" data-delb2="${i}" title="Xoá giai đoạn">✕</button>
+      </span></summary>
+    <div class="inner" style="display:flex;flex-direction:column;gap:12px">
+      <div class="grid g4">
+        <label class="f"><span class="lb">Tên giai đoạn</span><input type="text" data-b="${i}" data-f="ten" value="${b.ten || ''}"></label>
+        ${kntp ? '' : `<label class="f"><span class="lb">SL hoàn thành giai đoạn</span><input class="qty" type="text" data-b="${i}" data-f="qht" value="${fq(b.qht)}"></label>`}
+        <label class="f"><span class="lb">SL dở dang cuối kỳ</span><input class="qty" type="text" data-b="${i}" data-f="qdd" value="${fq(b.qdd)}"></label>
+        <label class="f"><span class="lb">Mức độ hoàn thành (%)</span><input class="qty" type="text" data-b="${i}" data-f="pct" value="${fq(b.pct)}"></label>
+      </div>
+      <div><p class="hint" style="margin:0 0 6px">Chi phí phát sinh trong kỳ tại giai đoạn ${i + 1}:</p>
+        <div class="grid g4">${K.map(m => `<label class="f"><span class="lb"><span class="tk ${m.cls}">${m.tk}</span>${m.s}</span><input class="money" type="text" data-b="${i}" data-f="C.${m.k}" value="${fq(b.C[m.k])}"></label>`).join('')}</div></div>
+      <div><p class="hint" style="margin:0 0 6px">Chi phí dở dang đầu kỳ tại giai đoạn ${i + 1}:</p>
+        <div class="grid g4">${K.map(m => `<label class="f"><span class="lb"><span class="tk ${m.cls}">${m.tk}</span>Dở dang ĐK</span><input class="money" type="text" data-b="${i}" data-f="ddk.${m.k}" value="${fq(b.ddk[m.k])}"></label>`).join('')}</div></div>
+    </div></details>`).join('');
+  $$('[data-b]', wrap).forEach(inp => inp.addEventListener('input', e => {
+    const i = +e.target.dataset.b, f = e.target.dataset.f, v = e.target.value;
+    if (f.indexOf('.') > 0){ const [a, k] = f.split('.'); S.buoc[i][a][k] = pn(v); }
+    else S.buoc[i][f] = (f === 'ten') ? v : pn(v);
+    compute();
+  }));
+  $$('[data-mvb]', wrap).forEach(b => b.addEventListener('click', e => { e.preventDefault(); rowMove('buoc', +b.dataset.i, +b.dataset.mvb); }));
+  $$('[data-dupb]', wrap).forEach(b => b.addEventListener('click', e => { e.preventDefault(); rowDup('buoc', +b.dataset.dupb); }));
+  $$('[data-delb2]', wrap).forEach(b => b.addEventListener('click', e => { e.preventDefault(); rowDel('buoc', +b.dataset.delb2); }));
+}
+
+/* ============================================================
+   TÍNH TOÁN & HIỂN THỊ KẾT QUẢ
+   ============================================================ */
+function compute(){
+  XL = el('optXayLap').checked;
+  syncCostDetail();
+  syncVisibility();
+  const id = S.method, R = el('results'); const out = [];
+  const dvt = T('f_dvt') || 'đvsp';
+
+  if (id === 'pb_ntp')      { R.innerHTML = calcPhanBuocNTP(dvt);   afterRender(); return; }
+  if (id === 'pb_kntp')     { R.innerHTML = calcPhanBuocKNTP(dvt);  afterRender(); return; }
+  if (id === 'donhang')     { R.innerHTML = calcDonHang(dvt);       afterRender(); return; }
+
+  const r = pipeline();
+  const tongZ = sum(r.Z);
+
+  if (id === 'giandon'){
+    const ten = T('gd_ten') || 'Sản phẩm';
+    out.push(kpis([
+      ['Tổng chi phí tính vào giá thành', fmz(sum(r.b.C)), 'đồng — Nợ TK 154'],
+      ['Dở dang cuối kỳ', fmz(sum(r.wip)), 'đồng — Dư Nợ TK 154'],
+      ['Tổng giá thành sản xuất', fmz(tongZ), 'đồng'],
+      ['Giá thành đơn vị', r.qht > 0 ? fmd(tongZ / r.qht) : '—', 'đ/' + dvt]
+    ]));
+    out.push(blockChiPhi(r.b));
+    out.push(blockSPDD(r));
+    out.push(card('Bảng tính giá thành sản phẩm', 'Kết quả 3', blockZ(r, ten, r.qht) +
+      `<div class="formula">Tổng giá thành = D<sub>đk</sub> + C<sub>ps</sub> − D<sub>ck</sub> − Các khoản giảm giá thành
+             = ${fmz(sum(r.b.ddk))} + ${fmz(sum(r.b.C))} − ${fmz(sum(r.wip))} − ${fmz(r.giam.tong)} = <b>${fmz(tongZ)}</b>
+Giá thành đơn vị = ${fmz(tongZ)} ÷ ${fq(r.qht)} = <b>${r.qht > 0 ? fmd(tongZ / r.qht) : '—'}</b> đ/${dvt}</div>`));
+    out.push(blockButToan(r, tongZ));
+    out.push(blockS37(r, ten, r.qht, tongZ));
+  }
+  else if (id === 'heso'){
+    const items = S.heso.filter(x => x.q > 0);
+    const tongQd = items.reduce((t, x) => t + x.q * x.h, 0);
+    const rows = items.map(x => {
+      const qd = x.q * x.h, ty = tongQd > 0 ? qd / tongQd : 0;
+      const Zi = {}; kms().forEach(m => Zi[m.k] = r.Z[m.k] * ty);
+      const tz = sum(Zi);
+      return { x, qd, ty, Zi, tz };
+    });
+    out.push(kpis([
+      ['Tổng sản lượng quy đổi', fq(tongQd), 'sản phẩm tiêu chuẩn'],
+      ['Tổng giá thành', fmz(tongZ), 'đồng'],
+      ['Giá thành 1 SP tiêu chuẩn', tongQd > 0 ? fmd(tongZ / tongQd) : '—', 'đồng'],
+      ['Số loại sản phẩm', String(items.length), 'sản phẩm chính']
+    ]));
+    out.push(blockChiPhi(r.b));
+    out.push(blockSPDD(r));
+    out.push(card('Quy đổi sản lượng theo hệ số', 'Kết quả 3',
+      tbl(['Sản phẩm', 'Sản lượng hoàn thành', 'Hệ số quy đổi', 'Sản lượng quy đổi', 'Tỷ trọng (%)'],
+        rows.map(o => tr([o.x.ten || '—', fq(o.x.q), fq(o.x.h), fq(o.qd), fm(o.ty * 100, 2)])).join('') +
+        tr(['<b>Cộng</b>', '', '', fq(tongQd), '100,00'], 'sum'))
+      + `<div class="formula">Sản lượng quy đổi = Sản lượng thực tế × Hệ số quy đổi
+Tổng giá thành SP i = Tổng giá thành nhóm × (Sản lượng quy đổi i ÷ Tổng sản lượng quy đổi)</div>`));
+    out.push(card('Bảng tính giá thành từng sản phẩm', 'Kết quả 4',
+      blockZ(r, 'toàn bộ nhóm sản phẩm', tongQd) +
+      tbl(['Sản phẩm', ...kmHead(), 'Tổng giá thành', 'Sản lượng', 'Giá thành đơn vị'],
+        rows.map(o => tr([o.x.ten || '—', ...kms().map(m => fmz(o.Zi[m.k])), fmz(o.tz), fq(o.x.q), fmd(o.x.q > 0 ? o.tz / o.x.q : 0)])).join('') +
+        tr(['<b>Cộng</b>', ...kmCells(r.Z), fmz(tongZ), '', ''], 'sum'))));
+    out.push(blockButToan(r, tongZ));
+    out.push(blockS37(r, items.map(x => x.ten).join(', '), tongQd, tongZ));
+  }
+  else if (id === 'tyle'){
+    const items = S.tyle.filter(x => x.q > 0);
+    const TC = zero(); items.forEach(x => kms().forEach(m => TC[m.k] += x.q * (x[m.k] || 0)));
+    const rate = {}; kms().forEach(m => rate[m.k] = TC[m.k] > 0 ? r.Z[m.k] / TC[m.k] : 0);
+    const rows = items.map(x => {
+      const tc = {}, Zi = {};
+      kms().forEach(m => { tc[m.k] = x.q * (x[m.k] || 0); Zi[m.k] = tc[m.k] * rate[m.k]; });
+      return { x, tc, Zi, tz:sum(Zi) };
+    });
+    out.push(kpis(kms().map(m => ['Tỷ lệ tính giá thành ' + m.tk, fm(rate[m.k] * 100, 2) + '%', m.s])));
+    out.push(blockChiPhi(r.b));
+    out.push(blockSPDD(r));
+    out.push(card('Xác định tiêu chuẩn phân bổ và tỷ lệ tính giá thành', 'Kết quả 3',
+      tbl(['Quy cách sản phẩm', 'Sản lượng', ...kmHead().map(h => 'Tiêu chuẩn ' + h.split('<br>')[0]), 'Cộng'],
+        rows.map(o => tr([o.x.ten || '—', fq(o.x.q), ...kms().map(m => fmz(o.tc[m.k])), fmz(sum(o.tc))])).join('') +
+        tr(['<b>Tổng tiêu chuẩn phân bổ</b>', '', ...kmCells(TC), fmz(sum(TC))], 'sum') +
+        tr(['<b>Chi phí thực tế (tổng giá thành)</b>', '', ...kmCells(r.Z), fmz(tongZ)], 'sum') +
+        tr(['<b>Tỷ lệ tính giá thành (%)</b>', '', ...kms().map(m => fm(rate[m.k] * 100, 2)), ''], 'rule'))
+      + `<div class="formula">Tiêu chuẩn phân bổ (khoản mục i) = Sản lượng thực tế × Giá thành kế hoạch đơn vị (khoản mục i)
+Tỷ lệ tính giá thành (khoản mục i) = Chi phí thực tế (i) ÷ Tổng tiêu chuẩn phân bổ (i)
+Giá thành thực tế = Tiêu chuẩn phân bổ × Tỷ lệ tính giá thành</div>`));
+    out.push(card('Bảng tính giá thành từng quy cách', 'Kết quả 4',
+      tbl(['Quy cách sản phẩm', ...kmHead(), 'Tổng giá thành', 'Sản lượng', 'Giá thành đơn vị'],
+        rows.map(o => tr([o.x.ten || '—', ...kms().map(m => fmz(o.Zi[m.k])), fmz(o.tz), fq(o.x.q), fmd(o.x.q > 0 ? o.tz / o.x.q : 0)])).join('') +
+        tr(['<b>Cộng</b>', ...kmCells(r.Z), fmz(tongZ), '', ''], 'sum'))));
+    out.push(blockButToan(r, tongZ));
+    out.push(blockS37(r, items.map(x => x.ten).join(', '), items.reduce((t, x) => t + x.q, 0), tongZ));
+  }
+  else if (id === 'loaitru'){
+    const ten = T('lt_ten') || 'Sản phẩm chính';
+    const phu = S.spphu.filter(x => x.q > 0 && x.gia > 0);
+    const giaTriPhu = phu.reduce((t, x) => t + x.q * x.gia * (1 - x.ln / 100), 0);
+    const LT = zero();
+    if (giaTriPhu > 0){
+      if (S.truSPPhu === 'nvl') LT.nvl = giaTriPhu;
+      else { const t = sum(r.Z); if (t > 0) kms().forEach(m => LT[m.k] = giaTriPhu * r.Z[m.k] / t); else LT.nvl = giaTriPhu; }
+    }
+    const Zc = addO(r.Z, LT, -1); const tzc = sum(Zc);
+    const q = r.qht;
+    out.push(kpis([
+      ['Tổng chi phí trước loại trừ', fmz(tongZ), 'đồng'],
+      ['Giá trị sản phẩm phụ loại trừ', fmz(giaTriPhu), 'đồng'],
+      ['Tổng giá thành SP chính', fmz(tzc), 'đồng'],
+      ['Giá thành đơn vị SP chính', q > 0 ? fmd(tzc / q) : '—', 'đ/' + dvt]
+    ]));
+    out.push(blockChiPhi(r.b));
+    out.push(blockSPDD(r));
+    out.push(card('Xác định giá trị sản phẩm phụ loại trừ', 'Kết quả 3',
+      tbl(['Sản phẩm phụ', 'Số lượng', 'Giá bán ước tính/đv', 'Lợi nhuận định mức (%)', 'Giá trị loại trừ'],
+        phu.map(x => tr([x.ten || '—', fq(x.q), fmz(x.gia), fq(x.ln), fmz(x.q * x.gia * (1 - x.ln / 100))])).join('') +
+        tr(['<b>Cộng</b>', '', '', '', fmz(giaTriPhu)], 'sum'))
+      + `<div class="formula">Giá trị SP phụ = Số lượng × Giá bán ước tính × (1 − Tỷ lệ lợi nhuận định mức)
+Tổng giá thành SP chính = D<sub>đk</sub> + C<sub>ps</sub> − D<sub>ck</sub> − Giá trị SP phụ − Các khoản giảm giá thành khác</div>`));
+    out.push(card('Bảng tính giá thành sản phẩm chính', 'Kết quả 4',
+      blockZ(r, 'trước khi loại trừ SP phụ', 0) +
+      tbl(['Chỉ tiêu', ...kmHead(), 'Tổng cộng'],
+        tr(['Tổng chi phí trước loại trừ', ...kmCells(r.Z), fmz(tongZ)]) +
+        tr(['Trừ: Giá trị sản phẩm phụ', ...kmCells(LT).map(x => '(' + x + ')'), '(' + fmz(giaTriPhu) + ')'], 'sub') +
+        tr([`<b>Tổng giá thành ${ten}</b>`, ...kmCells(Zc), fmz(tzc)], 'sum') +
+        (q > 0 ? tr(['<b>Giá thành đơn vị</b>', ...kms().map(m => fmd(Zc[m.k] / q)), fmd(tzc / q)], 'rule') : ''))));
+    const r2 = Object.assign({}, r, { Z:Zc, giam:{ tong:r.giam.tong + giaTriPhu, g:addO(r.giam.g, LT), phelieu:r.giam.phelieu, sphong:r.giam.sphong } });
+    out.push(blockButToan(r2, tzc) +
+      `<div class="law" style="margin-top:-6px">Giá trị sản phẩm phụ nhập kho ghi: <b>Nợ TK 152/155 – Có TK 154</b> số tiền ${fmz(giaTriPhu)}.</div>`);
+    out.push(blockS37(r2, ten, q, tzc));
+  }
+  else if (id === 'dinhmuc'){
+    const ten = T('dm_ten') || 'Sản phẩm';
+    const q = S.dmQ || r.qht;
+    const Zdm = zero(); kms().forEach(m => Zdm[m.k] = q * S.dmU[m.k]);
+    const CLtd = zero(); kms().forEach(m => CLtd[m.k] = S.dmCL[m.k]);
+    const CLtl = zero(); kms().forEach(m => CLtl[m.k] = r.Z[m.k] - Zdm[m.k] - CLtd[m.k]);
+    const tdm = sum(Zdm), ttd = sum(CLtd), ttl = sum(CLtl);
+    out.push(kpis([
+      ['Giá thành định mức', fmz(tdm), 'đồng'],
+      ['CL do thay đổi định mức', (ttd >= 0 ? '+' : '') + fmz(ttd), 'đồng'],
+      ['CL do thoát ly định mức', (ttl >= 0 ? '+' : '') + fmz(ttl), 'đồng'],
+      ['Giá thành thực tế', fmz(tongZ), q > 0 ? 'đồng — ' + fmd(tongZ / q) + ' đ/' + dvt : 'đồng']
+    ]));
+    out.push(blockChiPhi(r.b));
+    out.push(blockSPDD(r));
+    out.push(card('Phân tích giá thành theo định mức', 'Kết quả 3',
+      tbl(['Chỉ tiêu', ...kmHead(), 'Tổng cộng'],
+        tr(['Định mức đơn vị sản phẩm (đ/đv)', ...kms().map(m => fmd(S.dmU[m.k])), fmd(sum(S.dmU))]) +
+        tr([`(1) Giá thành định mức = ${fq(q)} đv × ĐM`, ...kmCells(Zdm), fmz(tdm)]) +
+        tr(['(2) Chênh lệch do thay đổi định mức', ...kms().map(m => (CLtd[m.k] >= 0 ? '' : '') + fmz(CLtd[m.k])), fmz(ttd)]) +
+        tr(['(3) Chênh lệch do thoát ly định mức', ...kms().map(m => fmz(CLtl[m.k])), fmz(ttl)], 'sub') +
+        tr(['<b>Giá thành thực tế (1)+(2)+(3)</b>', ...kmCells(r.Z), fmz(tongZ)], 'sum') +
+        (q > 0 ? tr(['<b>Giá thành đơn vị thực tế</b>', ...kms().map(m => fmd(r.Z[m.k] / q)), fmd(tongZ / q)], 'rule') : ''))
+      + `<div class="formula">Giá thành thực tế = Giá thành định mức ± Chênh lệch do thay đổi định mức ± Chênh lệch do thoát ly định mức
+Chênh lệch thoát ly định mức = Chi phí thực tế − Chi phí theo định mức − Chênh lệch do thay đổi định mức</div>`
+      + (Math.abs(ttl) > 0 ? `<div class="${ttl > 0 ? 'warnbox' : 'law'}">${ttl > 0
+        ? `Chi phí thực tế <b>vượt định mức ${fmz(ttl)} đồng</b> (${tdm > 0 ? fm(ttl / tdm * 100, 2) : '0'}%). Cần phân tích nguyên nhân theo từng khoản mục và xem xét phần vượt trên mức bình thường phải kết chuyển vào TK 632.`
+        : `Chi phí thực tế <b>tiết kiệm ${fmz(-ttl)} đồng</b> so với định mức (${tdm > 0 ? fm(-ttl / tdm * 100, 2) : '0'}%).`}</div>` : '')));
+    out.push(blockButToan(r, tongZ));
+    out.push(blockS37(r, ten, q, tongZ));
+  }
+  R.innerHTML = out.join('');
+  afterRender();
+}
+
+/* ---------- phân bước có tính NTP (kết chuyển tuần tự) ---------- */
+function calcPhanBuocNTP(dvt){
+  const out = []; const K = kms();
+  let carry = null, carryQ = 0;
+  const steps = [];
+  S.buoc.forEach((b, i) => {
+    const ddkT = i === 0 ? 0 : 0;
+    // chi phí đầu vào giai đoạn: NTP chuyển từ giai đoạn trước (nếu có)
+    const ntpIn = carry ? carry.tong : 0;
+    const pool = { ddk:b.ddk, C:b.C };
+    const e = b.qdd * (b.pct / 100);
+    const wip = zero(); let wipNtp = 0;
+    // NTP chuyển sang ứng xử như NVL bỏ 1 lần từ đầu giai đoạn
+    if (b.qdd > 0){
+      const denE = b.qht + b.qdd;          // cho NVL & NTP
+      const denC = b.qht + e;              // cho chi phí chế biến
+      if (ntpIn > 0 && denE > 0) wipNtp = ntpIn * b.qdd / denE;
+      if (denE > 0) wip.nvl = (b.ddk.nvl + b.C.nvl) * b.qdd / denE;
+      if (denC > 0) K.filter(m => m.k !== 'nvl').forEach(m => wip[m.k] = (b.ddk[m.k] + b.C[m.k]) * e / denC);
+    }
+    const Zk = zero(); K.forEach(m => Zk[m.k] = b.ddk[m.k] + b.C[m.k] - wip[m.k]);
+    const ntpOut = ntpIn - wipNtp;
+    const tong = sum(Zk) + ntpOut;
+    // quy về khoản mục gốc
+    const goc = zero();
+    K.forEach(m => goc[m.k] = Zk[m.k]);
+    if (carry && carry.tong > 0){
+      const ratio = ntpOut / carry.tong;
+      K.forEach(m => goc[m.k] += (carry.goc[m.k] || 0) * ratio);
+    }
+    steps.push({ b, i, ntpIn, wipNtp, wip, Zk, ntpOut, tong, goc, z: b.qht > 0 ? tong / b.qht : 0 });
+    carry = { tong, goc }; carryQ = b.qht;
+  });
+  const last = steps[steps.length - 1] || null;
+  if (!last) return card('Chưa có dữ liệu', '', '<div class="law">Hãy thêm ít nhất một giai đoạn ở Bước 4.</div>');
+
+  out.push(kpis([
+    ['Số giai đoạn chế biến', String(steps.length), 'giai đoạn'],
+    ['Tổng giá thành thành phẩm', fmz(last.tong), 'đồng'],
+    ['Sản lượng thành phẩm', fq(last.b.qht), dvt],
+    ['Giá thành đơn vị thành phẩm', fmd(last.z), 'đ/' + dvt]
+  ]));
+
+  steps.forEach(s => {
+    const head = ['Chỉ tiêu'].concat(s.i > 0 ? ['CP NTP bước trước'] : []).concat(kmHead()).concat(['Tổng cộng']);
+    const row = (t, ntp, o, tot, cls) => tr([t].concat(s.i > 0 ? [ntp] : []).concat(K.map(m => fmz(o[m.k] || 0))).concat([fmz(tot)]), cls);
+    let body = '';
+    body += row('Chi phí dở dang đầu kỳ', '—', s.b.ddk, sum(s.b.ddk));
+    if (s.i > 0) body += row('Giá thành NTP giai đoạn trước chuyển sang', fmz(s.ntpIn), zero(), s.ntpIn);
+    body += row('Chi phí phát sinh trong kỳ', '—', s.b.C, sum(s.b.C));
+    body += tr(['Trừ: Chi phí dở dang cuối kỳ'].concat(s.i > 0 ? ['(' + fmz(s.wipNtp) + ')'] : []).concat(K.map(m => '(' + fmz(s.wip[m.k]) + ')')).concat(['(' + fmz(sum(s.wip) + s.wipNtp) + ')']), 'sub');
+    body += tr([`<b>Giá thành ${s.i === steps.length - 1 ? 'thành phẩm' : 'nửa thành phẩm'} — ${s.b.ten || 'GĐ ' + (s.i + 1)}</b>`]
+      .concat(s.i > 0 ? [fmz(s.ntpOut)] : []).concat(K.map(m => fmz(s.Zk[m.k]))).concat([fmz(s.tong)]), 'sum');
+    body += tr(['<b>Giá thành đơn vị</b>'].concat(s.i > 0 ? [fmd(s.b.qht > 0 ? s.ntpOut / s.b.qht : 0)] : []).concat(K.map(m => fmd(s.b.qht > 0 ? s.Zk[m.k] / s.b.qht : 0))).concat([fmd(s.z)]), 'rule');
+    out.push(card(`Giai đoạn ${s.i + 1} — ${s.b.ten || ''}`, 'Bước ' + (s.i + 1),
+      tbl(head, body) +
+      `<div class="formula">Sản lượng hoàn thành ${fq(s.b.qht)} — dở dang ${fq(s.b.qdd)}, mức độ hoàn thành ${fq(s.b.pct)}%
+Chi phí NTP chuyển sang / NVL chính: đánh giá dở dang theo sản lượng dở dang thực tế (bỏ một lần từ đầu giai đoạn)
+Chi phí chế biến: đánh giá theo sản lượng hoàn thành tương đương ${fq(s.b.qdd * s.b.pct / 100)}</div>`));
+  });
+
+  out.push(card('Giá thành thành phẩm quy về khoản mục gốc', 'Tổng hợp',
+    tbl(['Chỉ tiêu', ...kmHead(), 'Tổng cộng'],
+      tr(['Tổng giá thành thành phẩm theo khoản mục gốc', ...K.map(m => fmz(last.goc[m.k])), fmz(sum(last.goc))], 'sum') +
+      tr(['Giá thành đơn vị', ...K.map(m => fmd(last.b.qht > 0 ? last.goc[m.k] / last.b.qht : 0)), fmd(last.z)], 'rule'))
+    + `<div class="law">Cột “CP NTP bước trước” được phân tích ngược về các khoản mục 621, 622${XL ? ', 623' : ''}, 627 phát sinh ở các giai đoạn trước theo tỷ trọng, để lập Thẻ tính giá thành S37-DN theo khoản mục.</div>`));
+
+  const rFake = {
+    b:{ ddk:S.buoc.reduce((a, b) => addO(a, b.ddk), zero()), C:S.buoc.reduce((a, b) => addO(a, b.C), zero()),
+        raw:{ nvl:0, nc:0, mtc:0, sxcBd:0, sxcCd:0 }, over:zero(), alloc:0, unalloc:0, tong632:0, useCS:false },
+    wip: steps.reduce((a, s) => addO(a, s.wip), zero()), Z:last.goc, giam:{ tong:0, g:zero(), phelieu:0, sphong:0 }
+  };
+  out.push(blockS37(rFake, last.b.ten || 'Thành phẩm', last.b.qht, last.tong));
+  out.push(card('Bút toán kết chuyển giữa các giai đoạn', 'Hạch toán',
+    steps.map((s, i) => `<div class="jv"><div class="jvh">Giai đoạn ${i + 1} — ${s.b.ten || ''}</div>
+      ${K.filter(m => s.b.C[m.k] > 0).map(m => `<div class="jl debit"><span class="dc">Nợ</span><span>TK 154 (${s.b.ten || 'GĐ' + (i + 1)}) — kết chuyển TK ${m.tk}</span><span class="amt">${fmz(s.b.C[m.k])}</span></div><div class="jl credit"><span class="dc">Có</span><span>TK ${m.tk}</span><span class="amt">${fmz(s.b.C[m.k])}</span></div>`).join('')}
+      ${i < steps.length - 1
+        ? `<div class="jl debit"><span class="dc">Nợ</span><span>TK 154 (${S.buoc[i + 1] ? (S.buoc[i + 1].ten || 'GĐ' + (i + 2)) : ''}) — nhận NTP</span><span class="amt">${fmz(s.tong)}</span></div><div class="jl credit"><span class="dc">Có</span><span>TK 154 (${s.b.ten || 'GĐ' + (i + 1)}) — giá thành NTP</span><span class="amt">${fmz(s.tong)}</span></div>`
+        : `<div class="jl debit"><span class="dc">Nợ</span><span>TK 155 — Sản phẩm (nhập kho thành phẩm)</span><span class="amt">${fmz(s.tong)}</span></div><div class="jl credit"><span class="dc">Có</span><span>TK 154 (${s.b.ten || 'GĐ' + (i + 1)})</span><span class="amt">${fmz(s.tong)}</span></div>`}
+      </div>`).join('')));
+  return out.join('');
+}
+
+/* ---------- phân bước KHÔNG tính NTP (kết chuyển song song) ---------- */
+function calcPhanBuocKNTP(dvt){
+  const K = kms(); const out = [];
+  const QTP = S.qTP;
+  if (!S.buoc.length) return card('Chưa có dữ liệu', '', '<div class="law">Hãy thêm ít nhất một giai đoạn ở Bước 4.</div>');
+  const n = S.buoc.length;
+  const parts = S.buoc.map((b, i) => {
+    const sauNay = S.buoc.slice(i + 1).reduce((t, x) => t + x.qdd, 0);
+    const denNvl = QTP + sauNay + b.qdd;                 // NVL bỏ 1 lần từ đầu giai đoạn i
+    const denCb  = QTP + sauNay + b.qdd * (b.pct / 100); // chi phí chế biến
+    const tong = zero(), inTP = zero();
+    K.forEach(m => tong[m.k] = (b.ddk[m.k] || 0) + (b.C[m.k] || 0));
+    K.forEach(m => {
+      const den = (m.k === 'nvl') ? denNvl : denCb;
+      inTP[m.k] = den > 0 ? tong[m.k] * QTP / den : 0;
+    });
+    const con = addO(tong, inTP, -1);
+    return { b, i, sauNay, denNvl, denCb, tong, inTP, con };
+  });
+  const Z = parts.reduce((a, p) => addO(a, p.inTP), zero());
+  const tongZ = sum(Z);
+  const ddckTong = parts.reduce((a, p) => addO(a, p.con), zero());
+
+  out.push(kpis([
+    ['Số giai đoạn chế biến', String(n), 'giai đoạn'],
+    ['Sản lượng thành phẩm', fq(QTP), dvt],
+    ['Tổng giá thành thành phẩm', fmz(tongZ), 'đồng'],
+    ['Giá thành đơn vị', QTP > 0 ? fmd(tongZ / QTP) : '—', 'đ/' + dvt]
+  ]));
+
+  out.push(card('Xác định mẫu số quy đổi của từng giai đoạn', 'Kết quả 1',
+    tbl(['Giai đoạn', 'SP dở dang tại GĐ', 'Mức độ HT (%)', 'SPDD ở các GĐ sau', 'Mẫu số — khoản mục NVL', 'Mẫu số — chi phí chế biến'],
+      parts.map(p => tr([`${p.i + 1}. ${p.b.ten || ''}`, fq(p.b.qdd), fq(p.b.pct), fq(p.sauNay), fq(p.denNvl), fq(p.denCb)])).join(''))
+    + `<div class="formula">Mẫu số (giai đoạn i) = Q<sub>TP</sub> + Σ SPDD ở các giai đoạn sau + SPDD tại giai đoạn i (× mức độ hoàn thành với chi phí chế biến)
+Chi phí giai đoạn i nằm trong thành phẩm = (D<sub>đk(i)</sub> + C<sub>ps(i)</sub>) ÷ Mẫu số × Q<sub>TP</sub></div>`));
+
+  parts.forEach(p => {
+    out.push(card(`Giai đoạn ${p.i + 1} — ${p.b.ten || ''} — chi phí nằm trong thành phẩm`, 'Bước ' + (p.i + 1),
+      tbl(['Chỉ tiêu', ...kmHead(), 'Tổng cộng'],
+        tr(['Dở dang đầu kỳ', ...K.map(m => fmz(p.b.ddk[m.k] || 0)), fmz(sum(p.b.ddk))]) +
+        tr(['Phát sinh trong kỳ', ...K.map(m => fmz(p.b.C[m.k] || 0)), fmz(sum(p.b.C))]) +
+        tr(['<b>Cộng chi phí giai đoạn</b>', ...kmCells(p.tong), fmz(sum(p.tong))], 'sum') +
+        tr(['<b>Chi phí nằm trong thành phẩm</b>', ...kmCells(p.inTP), fmz(sum(p.inTP))], 'rule') +
+        tr(['Còn lại — chi phí dở dang cuối kỳ', ...kmCells(p.con), fmz(sum(p.con))], 'sub'))));
+  });
+
+  out.push(card('Kết chuyển song song — tổng hợp giá thành thành phẩm', 'Tổng hợp',
+    tbl(['Giai đoạn', ...kmHead(), 'Cộng'],
+      parts.map(p => tr([`${p.i + 1}. ${p.b.ten || ''}`, ...kmCells(p.inTP), fmz(sum(p.inTP))])).join('') +
+      tr(['<b>Tổng giá thành thành phẩm</b>', ...kmCells(Z), fmz(tongZ)], 'sum') +
+      (QTP > 0 ? tr(['<b>Giá thành đơn vị</b>', ...K.map(m => fmd(Z[m.k] / QTP)), fmd(tongZ / QTP)], 'rule') : '')) +
+    tbl(['Chỉ tiêu', 'Số tiền'],
+      tr(['Tổng chi phí dở dang cuối kỳ toàn doanh nghiệp (Dư Nợ TK 154)', fmz(sum(ddckTong))], 'sum'))));
+
+  const rFake = {
+    b:{ ddk:S.buoc.reduce((a, b) => addO(a, b.ddk), zero()), C:S.buoc.reduce((a, b) => addO(a, b.C), zero()),
+        raw:{ nvl:0, nc:0, mtc:0, sxcBd:0, sxcCd:0 }, over:zero(), alloc:0, unalloc:0, tong632:0, useCS:false },
+    wip: ddckTong, Z, giam:{ tong:0, g:zero(), phelieu:0, sphong:0 }
+  };
+  out.push(blockS37(rFake, 'Thành phẩm', QTP, tongZ));
+  out.push(card('Bút toán', 'Hạch toán', `<div class="jv"><div class="jvh">Nhập kho thành phẩm</div>
+    <div class="jl debit"><span class="dc">Nợ</span><span>TK 155 — Sản phẩm</span><span class="amt">${fmz(tongZ)}</span></div>
+    <div class="jl credit"><span class="dc">Có</span><span>TK 154 — Chi phí SXKD dở dang (chi tiết các giai đoạn)</span><span class="amt">${fmz(tongZ)}</span></div></div>`));
+  return out.join('');
+}
+
+/* ---------- đơn đặt hàng ---------- */
+function calcDonHang(dvt){
+  const K = kms(); const out = [];
+  const b = readBase();
+  const items = S.donhang;
+  /* chi phí trực tiếp của đơn đặt hàng được tập hợp riêng theo từng đơn */
+  b.raw.nvl = items.reduce((t, o) => t + pn(o.nvl), 0);
+  b.raw.nc  = items.reduce((t, o) => t + pn(o.nc), 0);
+  b.raw.mtc = XL ? items.reduce((t, o) => t + pn(o.mtc), 0) : 0;
+  b.over = zero();
+  b.C.nvl = b.raw.nvl; b.C.nc = b.raw.nc; b.C.mtc = b.raw.mtc;
+  b.tong632 = b.unalloc;
+  const sxc = b.C.sxc;
+  const key = S.dhTieuThuc;
+  const val = o => key === 'nc' ? pn(o.nc) : key === 'nvl' ? pn(o.nvl) : key === 'tructiep' ? (pn(o.nvl) + pn(o.nc) + (XL ? pn(o.mtc) : 0)) : pn(o.tt);
+  const tongTT = items.reduce((t, o) => t + val(o), 0);
+  const rows = items.map(o => {
+    const tt = val(o), pb = tongTT > 0 ? sxc * tt / tongTT : 0;
+    const Zi = { nvl:pn(o.nvl), nc:pn(o.nc), mtc: XL ? pn(o.mtc) : 0, sxc:pb };
+    const tz = sum(Zi) + pn(o.ddk);
+    return { o, tt, pb, Zi, tz, ht: String(o.ht) === '1' };
+  });
+  const done = rows.filter(r => r.ht), wip = rows.filter(r => !r.ht);
+  const tongZ = done.reduce((t, r) => t + r.tz, 0);
+  const tongDD = wip.reduce((t, r) => t + r.tz, 0);
+  const ttName = { giomay:'Số giờ máy chạy', giocong:'Số giờ công trực tiếp', nc:'Chi phí nhân công trực tiếp', nvl:'Chi phí NVL trực tiếp', tructiep:'Tổng chi phí trực tiếp' }[key];
+
+  out.push(kpis([
+    ['Đơn hàng hoàn thành', String(done.length) + '/' + String(rows.length), 'đơn hàng'],
+    ['Tổng giá thành đơn hàng hoàn thành', fmz(tongZ), 'đồng'],
+    ['Chi phí SXKD dở dang cuối kỳ', fmz(tongDD), 'đồng — đơn chưa hoàn thành'],
+    ['Đơn giá phân bổ CPSXC', tongTT > 0 ? fmd(sxc / tongTT) : '—', 'đ / đơn vị tiêu thức']
+  ]));
+  out.push(blockChiPhi(b));
+  out.push(card('Phân bổ chi phí sản xuất chung cho các đơn hàng', 'Kết quả 2',
+    `<div class="law"><b>Tiêu thức phân bổ:</b> ${ttName}. Tổng tiêu thức toàn kỳ: <b>${fq(tongTT)}</b>. Chi phí sản xuất chung phân bổ: <b>${fmz(sxc)}</b> đồng.</div>` +
+    tbl(['Đơn hàng', 'Tiêu thức phân bổ', 'Tỷ trọng (%)', 'CPSXC phân bổ'],
+      rows.map(r => tr([`${r.o.ma || ''} ${r.o.ten || ''}`, fq(r.tt), tongTT > 0 ? fm(r.tt / tongTT * 100, 2) : '0,00', fmz(r.pb)])).join('') +
+      tr(['<b>Cộng</b>', fq(tongTT), '100,00', fmz(sxc)], 'sum'))
+    + `<div class="formula">Hệ số phân bổ = Chi phí sản xuất chung ÷ Tổng tiêu thức phân bổ = ${fmz(sxc)} ÷ ${fq(tongTT)} = ${tongTT > 0 ? fmd(sxc / tongTT) : '—'}
+CPSXC phân bổ cho đơn hàng = Tiêu thức của đơn hàng × Hệ số phân bổ</div>`));
+
+  out.push(card('Bảng tính giá thành theo đơn đặt hàng', 'Kết quả 3',
+    tbl(['Đơn hàng', 'Trạng thái', 'CP dở dang ĐK', ...kmHead(), 'Tổng giá thành', 'SL', 'Giá thành đơn vị'],
+      rows.map(r => tr([`<b>${r.o.ma || ''}</b> ${r.o.ten || ''}`,
+        r.ht ? '<span class="pill ok">Hoàn thành</span>' : '<span class="pill warn">Dở dang</span>',
+        fmz(pn(r.o.ddk)), ...K.map(m => fmz(r.Zi[m.k])), fmz(r.tz),
+        r.ht ? fq(r.o.q) : '—', r.ht && pn(r.o.q) > 0 ? fmd(r.tz / pn(r.o.q)) : '—'])).join('') +
+      tr(['<b>Cộng đơn hàng hoàn thành → nhập kho (Nợ 155/Có 154)</b>', '', '', ...K.map(() => ''), fmz(tongZ), '', ''], 'sum') +
+      tr(['<b>Cộng đơn hàng dở dang → Dư Nợ TK 154 cuối kỳ</b>', '', '', ...K.map(() => ''), fmz(tongDD), '', ''], 'rule'))));
+
+  out.push(card('Bút toán hạch toán', 'Kết quả 4',
+    `<div class="jv"><div class="jvh">Kết chuyển chi phí và nhập kho sản phẩm hoàn thành</div>
+      ${K.map(m => { const t = m.k === 'sxc' ? b.raw.sxcBd + b.raw.sxcCd : rows.reduce((s, r) => s + r.Zi[m.k], 0); const v154 = m.k === 'sxc' ? sxc : t;
+        return t > 0 ? `<div class="jl debit"><span class="dc">Nợ</span><span>TK 154 — chi tiết từng đơn hàng (kết chuyển TK ${m.tk})</span><span class="amt">${fmz(v154)}</span></div>${m.k === 'sxc' && b.unalloc > 0 ? `<div class="jl debit"><span class="dc">Nợ</span><span>TK 632 — CPSXC cố định không phân bổ</span><span class="amt">${fmz(b.unalloc)}</span></div>` : ''}<div class="jl credit"><span class="dc">Có</span><span>TK ${m.tk}</span><span class="amt">${fmz(t)}</span></div>` : ''; }).join('')}
+      <div class="jl debit"><span class="dc">Nợ</span><span>TK 155 — Sản phẩm (đơn hàng hoàn thành)</span><span class="amt">${fmz(tongZ)}</span></div>
+      <div class="jl credit"><span class="dc">Có</span><span>TK 154 — Chi phí SXKD dở dang</span><span class="amt">${fmz(tongZ)}</span></div></div>
+     <div class="law">Các đơn hàng chưa hoàn thành đến cuối kỳ (${wip.map(r => r.o.ma).join(', ') || 'không có'}) giữ nguyên toàn bộ chi phí <b>${fmz(tongDD)}</b> đồng trên số dư Nợ TK 154.</div>`));
+  return out.join('');
+}
+
+/* ============================================================
+   HIỂN THỊ / ẨN THEO PHƯƠNG PHÁP
+   ============================================================ */
+function show(node, on){ if (node) node.hidden = !on; }
+function syncVisibility(){
+  const m = M(S.method); const u = m.uses;
+  ['wrapMtc', 'wrapVmtc', 'wrapDmtc', 'wrapDMmtc'].forEach(id => show(el(id), XL));
+  show(el('vmBlock'), el('optVuotMuc').checked);
+  el('csBlock').style.display = el('optCongSuat').checked ? '' : 'none';
+
+  const costCard = el('c_nvl').closest('.card');
+  const noCosts = (u.costs === false);
+  costCard.style.display = noCosts ? 'none' : '';
+  ['c_nvl', 'c_nc', 'c_mtc'].forEach(id => {
+    const L = el(id) ? el(id).closest('label') : null;
+    if (L) L.style.display = (u.costs === 'sxconly') ? 'none' : '';
+  });
+  el('cardCommon').style.display = (u.wip === false) ? 'none' : '';
+  const wipMode = $('#segWip button[aria-pressed="true"]').dataset.w;
+  show(el('dmGrid'), wipMode === 'dinhmuc');
+  el('wipGrid').style.display = wipMode === 'khong' ? 'none' : '';
+  show(el('wrapPct'), wipMode !== 'nvltt' || el('w_bodan').value === '1');
+  show(el('wrapBoDan'), true);
+
+  const ps = V('c_nvl') + V('c_nc') + (XL ? V('c_mtc') : 0) + V('c_sxcbd') + V('c_sxccd');
+  el('pillPS').textContent = fmz(ps) + ' đ';
+
+  const b = readBase();
+  const cn = el('csNote');
+  if (b.qbt > 0 && b.qtt > 0){
+    cn.innerHTML = b.thieuCS
+      ? `Mức hoạt động đạt <b>${fm(b.qtt / b.qbt * 100, 1)}%</b> công suất bình thường → chỉ phân bổ <b>${fmz(b.alloc)}</b> đồng CPSXC cố định vào giá thành; <b>${fmz(b.unalloc)}</b> đồng ghi Nợ TK 632.`
+      : `Mức hoạt động đạt <b>${fm(b.qtt / b.qbt * 100, 1)}%</b> công suất bình thường → phân bổ toàn bộ CPSXC cố định vào giá thành theo chi phí thực tế phát sinh.`;
+  } else cn.innerHTML = 'Nhập công suất bình thường và sản lượng thực tế để ứng dụng kiểm tra mức phân bổ chi phí sản xuất chung cố định theo <b>VAS 02</b> và TT 99/2025.';
+
+  const wf = el('wipFormula');
+  const F = {
+    nvltt: 'D<sub>ck</sub> = (D<sub>đk</sub> + C<sub>NVLTT</sub>) ÷ (Q<sub>ht</sub> + Q<sub>dd</sub>) × Q<sub>dd</sub>\nChỉ tính chi phí NVL trực tiếp cho SPDD — áp dụng khi chi phí NVLTT chiếm tỷ trọng lớn (trên 70%) trong giá thành.',
+    tuongduong: 'Khoản mục NVL chính (bỏ một lần từ đầu):  D<sub>ck</sub> = (D<sub>đk</sub> + C) ÷ (Q<sub>ht</sub> + Q<sub>dd</sub>) × Q<sub>dd</sub>\nChi phí chế biến (622' + (XL ? ', 623' : '') + ', 627):  D<sub>ck</sub> = (D<sub>đk</sub> + C) ÷ (Q<sub>ht</sub> + Q<sub>dd</sub> × %HT) × (Q<sub>dd</sub> × %HT)',
+    dinhmuc: 'D<sub>ck</sub> (theo từng khoản mục) = Q<sub>dd</sub> × Mức độ hoàn thành × Chi phí định mức đơn vị của khoản mục đó',
+    khong: 'Không đánh giá sản phẩm dở dang — toàn bộ chi phí tính hết cho sản phẩm hoàn thành trong kỳ.'
+  };
+  wf.innerHTML = F[wipMode];
+}
+
+function afterRender(){ /* hook cho các thao tác sau render */ }
+
+/* ============================================================
+   BÀI TOÁN MẪU
+   ============================================================ */
+const SAMPLES = {
+giandon(){
+  XL = false; el('optXayLap').checked = false; el('optCongSuat').checked = true; el('optVuotMuc').checked = false;
+  setV('f_dn','CÔNG TY CỔ PHẦN THỰC PHẨM MINH LONG'); setV('f_px','Phân xưởng rang xay số 1');
+  setV('f_ky','Tháng 08/2026'); setV('f_dvt','kg');
+  setV('c_nvl',1800000000); setV('c_nc',360000000); setV('c_sxcbd',140000000); setV('c_sxccd',220000000);
+  setV('cs_bt',100000); setV('cs_tt',90000);
+  setV('d_nvl',120000000); setV('d_nc',18000000); setV('d_sxc',12000000); setV('d_mtc',0);
+  segSet('segWip','tuongduong'); setV('w_qht',88000); setV('w_qdd',5000); setV('w_pct',40); el('w_bodan').value = '0';
+  setV('g_phelieu',8000000); setV('g_sphong',0); el('g_truvao').value = 'nvl';
+  S.cpct = [
+    { ngay:'05/08/2026', ct:'PX08-012', dg:'Xuất kho cà phê nhân đưa vào rang', km:'621', tien:1520000000 },
+    { ngay:'12/08/2026', ct:'PX08-031', dg:'Xuất kho hương liệu, phụ gia', km:'621', tien:180000000 },
+    { ngay:'20/08/2026', ct:'PX08-058', dg:'Xuất kho bao bì đóng gói', km:'621', tien:100000000 },
+    { ngay:'31/08/2026', ct:'BL08', dg:'Lương công nhân trực tiếp sản xuất', km:'622', tien:291500000 },
+    { ngay:'31/08/2026', ct:'BL08', dg:'Các khoản trích theo lương (23,5%)', km:'622', tien:68500000 },
+    { ngay:'31/08/2026', ct:'PC08-14', dg:'Tiền điện chạy máy rang, máy xay', km:'627bd', tien:78000000 },
+    { ngay:'31/08/2026', ct:'PX08-060', dg:'Vật liệu phụ, công cụ dụng cụ phân xưởng', km:'627bd', tien:42000000 },
+    { ngay:'31/08/2026', ct:'BL08', dg:'Nhân công gián tiếp trả theo sản lượng', km:'627bd', tien:20000000 },
+    { ngay:'31/08/2026', ct:'KH08', dg:'Khấu hao TSCĐ dùng cho phân xưởng', km:'627cd', tien:150000000 },
+    { ngay:'31/08/2026', ct:'BL08', dg:'Lương nhân viên quản lý phân xưởng', km:'627cd', tien:45000000 },
+    { ngay:'31/08/2026', ct:'PC08-22', dg:'Tiền thuê đất, phí bảo vệ môi trường (TK 6275)', km:'627cd', tien:25000000 }
+  ];
+  el('optChiTiet').checked = true; renderTable('cpct','tbl_cpct');
+  renderMethodBox(); setV('gd_ten','Cà phê rang xay');
+  return 'Doanh nghiệp chế biến cà phê, một loại sản phẩm, quy trình khép kín. Sản lượng thực tế 90.000 kg thấp hơn công suất bình thường 100.000 kg nên phần chi phí sản xuất chung cố định tương ứng không được phân bổ vào giá thành.';
+},
+heso(){
+  XL = false; el('optXayLap').checked = false; el('optCongSuat').checked = true; el('optVuotMuc').checked = false;
+  setV('f_dn','CÔNG TY TNHH HOÁ DẦU TRƯỜNG AN'); setV('f_px','Phân xưởng chưng cất');
+  setV('f_ky','Tháng 08/2026'); setV('f_dvt','lít');
+  setV('c_nvl',2350000000); setV('c_nc',470000000); setV('c_sxcbd',200000000); setV('c_sxccd',176000000);
+  setV('cs_bt',94000); setV('cs_tt',94000);
+  setV('d_nvl',0); setV('d_nc',0); setV('d_sxc',0); setV('d_mtc',0);
+  segSet('segWip','khong'); setV('w_qht',94000); setV('w_qdd',0); setV('w_pct',0);
+  setV('g_phelieu',0); setV('g_sphong',0);
+  S.heso = [ { ten:'Dầu A (tiêu chuẩn)', q:40000, h:1 }, { ten:'Dầu B (cao cấp)', q:24000, h:1.25 }, { ten:'Dầu C (thứ phẩm)', q:30000, h:0.8 } ];
+  renderMethodBox();
+  return 'Một quy trình chưng cất cho ra đồng thời ba loại dầu. Sản lượng quy đổi về sản phẩm tiêu chuẩn: 40.000 × 1,0 + 24.000 × 1,25 + 30.000 × 0,8 = 94.000 lít tiêu chuẩn.';
+},
+tyle(){
+  XL = false; el('optXayLap').checked = false; el('optCongSuat').checked = false; el('optVuotMuc').checked = false;
+  setV('f_dn','CÔNG TY CỔ PHẦN MAY THÀNH CÔNG'); setV('f_px','Xí nghiệp may số 2');
+  setV('f_ky','Tháng 08/2026'); setV('f_dvt','áo');
+  setV('c_nvl',3444000000); setV('c_nc',1185600000); setV('c_sxcbd',500000000); setV('c_sxccd',431350000);
+  setV('cs_bt',0); setV('cs_tt',0);
+  setV('d_nvl',0); setV('d_nc',0); setV('d_sxc',0); setV('d_mtc',0);
+  segSet('segWip','khong'); setV('w_qht',33000); setV('w_qdd',0); setV('w_pct',0);
+  setV('g_phelieu',0); setV('g_sphong',0);
+  S.tyle = [
+    { ten:'Áo sơ mi size S', q:10000, nvl:90000, nc:35000, mtc:0, sxc:25000 },
+    { ten:'Áo sơ mi size M', q:15000, nvl:100000, nc:38000, mtc:0, sxc:27000 },
+    { ten:'Áo sơ mi size L', q:8000,  nvl:110000, nc:41000, mtc:0, sxc:29000 }
+  ];
+  renderMethodBox();
+  return 'Cùng một dây chuyền may ba quy cách áo sơ mi. Lấy giá thành kế hoạch đơn vị làm tiêu chuẩn phân bổ, xác định tỷ lệ tính giá thành riêng cho từng khoản mục chi phí.';
+},
+loaitru(){
+  XL = false; el('optXayLap').checked = false; el('optCongSuat').checked = true; el('optVuotMuc').checked = false;
+  setV('f_dn','CÔNG TY CỔ PHẦN MÍA ĐƯỜNG LAM SƠN'); setV('f_px','Phân xưởng chế luyện');
+  setV('f_ky','Tháng 08/2026'); setV('f_dvt','tấn');
+  setV('c_nvl',4500000000); setV('c_nc',600000000); setV('c_sxcbd',300000000); setV('c_sxccd',400000000);
+  setV('cs_bt',5000); setV('cs_tt',4500);
+  setV('d_nvl',200000000); setV('d_nc',30000000); setV('d_sxc',20000000); setV('d_mtc',0);
+  segSet('segWip','nvltt'); setV('w_qht',4400); setV('w_qdd',200); setV('w_pct',50); el('w_bodan').value = '0';
+  setV('g_phelieu',0); setV('g_sphong',0);
+  S.spphu = [ { ten:'Rỉ đường (mật rỉ)', q:900, gia:1200000, ln:15 } ];
+  S.truSPPhu = 'tytrong';
+  renderMethodBox(); setV('lt_ten','Đường RS'); el('lt_tru').value = 'tytrong';
+  return 'Quy trình ép — chế luyện mía cho ra đường RS (sản phẩm chính) và rỉ đường (sản phẩm phụ). Giá trị rỉ đường được xác định theo giá bán ước tính trừ lợi nhuận định mức 15% và loại trừ khỏi tổng chi phí.';
+},
+pb_ntp(){
+  XL = false; el('optXayLap').checked = false;
+  setV('f_dn','CÔNG TY CỔ PHẦN DỆT MAY PHƯƠNG NAM'); setV('f_px','Nhà máy sợi – dệt');
+  setV('f_ky','Tháng 08/2026'); setV('f_dvt','mét');
+  S.buoc = [
+    { ten:'Kéo sợi', ddk:{ nvl:50000000, nc:10000000, mtc:0, sxc:8000000 }, C:{ nvl:800000000, nc:150000000, mtc:0, sxc:120000000 }, qht:100000, qdd:10000, pct:50 },
+    { ten:'Dệt vải',  ddk:zero(), C:{ nvl:100000000, nc:200000000, mtc:0, sxc:160000000 }, qht:90000, qdd:8000, pct:50 }
+  ];
+  renderMethodBox();
+  return 'Quy trình hai giai đoạn: kéo sợi → dệt vải. Giá thành nửa thành phẩm sợi được kết chuyển tuần tự sang giai đoạn dệt; nửa thành phẩm ứng xử như nguyên vật liệu bỏ một lần từ đầu giai đoạn sau.';
+},
+pb_kntp(){
+  XL = false; el('optXayLap').checked = false;
+  setV('f_dn','CÔNG TY CỔ PHẦN DỆT MAY PHƯƠNG NAM'); setV('f_px','Nhà máy sợi – dệt – nhuộm');
+  setV('f_ky','Tháng 08/2026'); setV('f_dvt','mét');
+  S.qTP = 90000;
+  S.buoc = [
+    { ten:'Kéo sợi',          ddk:{ nvl:50000000, nc:10000000, mtc:0, sxc:8000000 }, C:{ nvl:800000000, nc:150000000, mtc:0, sxc:120000000 }, qht:0, qdd:10000, pct:50 },
+    { ten:'Dệt vải mộc',      ddk:zero(), C:{ nvl:100000000, nc:200000000, mtc:0, sxc:160000000 }, qht:0, qdd:8000, pct:50 },
+    { ten:'Nhuộm – hoàn tất', ddk:zero(), C:{ nvl:60000000,  nc:120000000, mtc:0, sxc:90000000 },  qht:0, qdd:4000, pct:25 }
+  ];
+  renderMethodBox();
+  return 'Cùng doanh nghiệp dệt nhưng gồm ba giai đoạn và không tính giá thành nửa thành phẩm. Kế toán xác định phần chi phí của mỗi giai đoạn nằm trong 90.000 mét vải thành phẩm rồi kết chuyển song song.';
+},
+donhang(){
+  XL = false; el('optXayLap').checked = false; el('optCongSuat').checked = true; el('optVuotMuc').checked = false;
+  setV('f_dn','CÔNG TY CỔ PHẦN CƠ KHÍ ĐÔNG ANH'); setV('f_px','Phân xưởng kết cấu thép');
+  setV('f_ky','Tháng 08/2026'); setV('f_dvt','tấn / bộ');
+  setV('c_nvl',0); setV('c_nc',0); setV('c_sxcbd',240000000); setV('c_sxccd',360000000);
+  setV('cs_bt',6000); setV('cs_tt',6000);
+  S.dhTieuThuc = 'giomay';
+  S.donhang = [
+    { ma:'ĐH-01', ten:'Khung thép nhà xưởng', ht:'1', q:50, ddk:220000000, nvl:1200000000, nc:180000000, mtc:0, tt:3000 },
+    { ma:'ĐH-02', ten:'Hệ băng tải',          ht:'1', q:20, ddk:0,         nvl:600000000,  nc:140000000, mtc:0, tt:2000 },
+    { ma:'ĐH-03', ten:'Bồn chứa áp lực',      ht:'0', q:10, ddk:0,         nvl:400000000,  nc:80000000,  mtc:0, tt:1000 }
+  ];
+  renderMethodBox();
+  return 'Ba đơn hàng thi công trong kỳ, hai đơn hoàn thành. Chi phí sản xuất chung 600 triệu đồng phân bổ theo số giờ máy chạy (tổng 6.000 giờ). Đơn hàng ĐH-03 chưa hoàn thành nên toàn bộ chi phí là sản phẩm dở dang cuối kỳ.';
+},
+dinhmuc(){
+  XL = false; el('optXayLap').checked = false; el('optCongSuat').checked = false; el('optVuotMuc').checked = false;
+  setV('f_dn','CÔNG TY CỔ PHẦN NHỰA BÌNH MINH'); setV('f_px','Phân xưởng đùn ống');
+  setV('f_ky','Tháng 08/2026'); setV('f_dvt','mét');
+  setV('c_nvl',8465000000); setV('c_nc',1155000000); setV('c_sxcbd',500000000); setV('c_sxccd',462000000);
+  setV('cs_bt',0); setV('cs_tt',0);
+  setV('d_nvl',0); setV('d_nc',0); setV('d_sxc',0); setV('d_mtc',0);
+  segSet('segWip','khong'); setV('w_qht',200000); setV('w_qdd',0); setV('w_pct',0);
+  setV('g_phelieu',0); setV('g_sphong',0);
+  S.dmQ = 200000;
+  S.dmU = { nvl:42000, nc:6000, mtc:0, sxc:4500 };
+  S.dmCL = { nvl:-120000000, nc:0, mtc:0, sxc:0 };
+  renderMethodBox(); setV('dm_ten','Ống uPVC D110');
+  return 'Sản xuất 200.000 mét ống uPVC D110 với hệ thống định mức ổn định. Từ 01/08 định mức nguyên liệu được điều chỉnh giảm làm giá thành định mức giảm 120 triệu đồng; phần còn lại là chênh lệch do thoát ly định mức.';
+}
+};
+function segSet(id, val){
+  $$('#' + id + ' button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.w === val)));
+}
+
+/* ============================================================
+   SAO CHÉP SANG EXCEL
+   ============================================================ */
+function toTSV(){
+  const lines = [];
+  lines.push([T('f_dn') || '', T('f_px') || '', T('f_ky') || ''].join('\t'));
+  lines.push('Phương pháp: ' + M(S.method).nm);
+  lines.push('');
+  $$('#results .card').forEach(c => {
+    const h = $('h2', c); if (h) lines.push(h.textContent.toUpperCase());
+    $$('table', c).forEach(t => {
+      $$('tr', t).forEach(row => {
+        lines.push($$('th,td', row).map(td => {
+          let s = td.innerText.replace(/\s+/g, ' ').trim();
+          if (/^\(?-?[\d.,]+\)?$/.test(s)) s = s.replace(/\./g, '').replace(',', '.').replace(/[()]/g, m => m === '(' ? '-' : '');
+          return s;
+        }).join('\t'));
+      });
+      lines.push('');
+    });
+    $$('.jv', c).forEach(j => {
+      lines.push($('.jvh', j).textContent);
+      $$('.jl', j).forEach(l => lines.push($$('span', l).map(s => s.textContent.trim()).join('\t')));
+      lines.push('');
+    });
+  });
+  return lines.join('\n');
+}
+
+/* ============================================================
+   KHỞI TẠO
+   ============================================================ */
+function buildRail(){
+  el('mlist').innerHTML = METHODS.map((m, i) =>
+    `<button class="mitem" data-m="${m.id}" aria-pressed="${m.id === S.method}">
+      <span class="idx">${String(i + 1).padStart(2, '0')}</span>
+      <span><span class="nm">${m.nm}</span><span class="ds" style="display:block">${m.ds}</span></span></button>`).join('');
+  $$('#mlist .mitem').forEach(b => b.addEventListener('click', () => selectMethod(b.dataset.m)));
+}
+function selectMethod(id){
+  S.method = id;
+  $$('#mlist .mitem').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.m === id)));
+  const m = M(id);
+  el('mTitle').textContent = m.nm;
+  el('mDesc').textContent = m.desc;
+  el('methodBoxTitle').textContent = 'Thông số riêng — ' + m.nm;
+  el('cardMethod').style.display = '';
+  renderMethodBox();
+  compute();
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+function initDefaults(){
+  S.heso    = [{ ten:'Sản phẩm A', q:0, h:1 }, { ten:'Sản phẩm B', q:0, h:1 }];
+  S.tyle    = [{ ten:'Quy cách 1', q:0, nvl:0, nc:0, mtc:0, sxc:0 }];
+  S.spphu   = [{ ten:'Sản phẩm phụ', q:0, gia:0, ln:0 }];
+  S.buoc    = [{ ten:'Giai đoạn 1', ddk:zero(), C:zero(), qht:0, qdd:0, pct:50 },
+               { ten:'Giai đoạn 2', ddk:zero(), C:zero(), qht:0, qdd:0, pct:50 }];
+  S.donhang = [{ ma:'ĐH-01', ten:'', ht:'1', q:0, ddk:0, nvl:0, nc:0, mtc:0, tt:0 }];
+  S.cpct = [{ ngay:'', ct:'', dg:'', km:'621', tien:0 }];
+  S.dmQ = 0; S.dmU = zero(); S.dmCL = zero(); S.qTP = 0;
+}
+
+function clearAll(){
+  ['c_nvl','c_nc','c_mtc','c_sxcbd','c_sxccd','cs_bt','cs_tt','v_nvl','v_nc','v_mtc',
+   'd_nvl','d_nc','d_mtc','d_sxc','w_qht','w_qdd','dm_nvl','dm_nc','dm_mtc','dm_sxc',
+   'g_phelieu','g_sphong'].forEach(id => setV(id, 0));
+  setV('w_pct', 50);
+  ['f_dn','f_px','f_ky','f_dvt'].forEach(id => setV(id, ''));
+  el('optChiTiet').checked = false;
+  initDefaults(); renderTable('cpct', 'tbl_cpct'); renderMethodBox(); compute();
+  toast('Đã xoá toàn bộ số liệu');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initDefaults();
+  buildRail();
+  initImport();
+  $$('#segWip button').forEach(b => b.addEventListener('click', () => { segSet('segWip', b.dataset.w); compute(); }));
+  $$('input,select').forEach(i => { if (!i.dataset.k && !i.dataset.b) i.addEventListener('input', compute); });
+  ['optXayLap','optCongSuat','optVuotMuc'].forEach(id => el(id).addEventListener('change', () => { renderMethodBox(); compute(); }));
+
+  el('btnSample').addEventListener('click', () => {
+    el('optChiTiet').checked = false;
+    const note = SAMPLES[S.method]();
+    renderTable('cpct', 'tbl_cpct');
+    compute();
+    const R = el('results');
+    R.insertAdjacentHTML('afterbegin', `<div class="law noprint"><b>Bài toán mẫu — ${M(S.method).nm}.</b> ${note}</div>`);
+    toast('Đã nạp bài toán mẫu');
+  });
+  el('btnClear').addEventListener('click', clearAll);
+  el('btnPrint').addEventListener('click', () => window.print());
+  el('btnCopy').addEventListener('click', async () => {
+    const txt = toTSV();
+    try { await navigator.clipboard.writeText(txt); toast('Đã sao chép — dán (Ctrl+V) vào Excel'); }
+    catch (e){
+      const ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta);
+      ta.select(); try { document.execCommand('copy'); toast('Đã sao chép — dán vào Excel'); }
+      catch (_){ toast('Trình duyệt không cho phép sao chép'); } document.body.removeChild(ta);
+    }
+  });
+  el('btnTheme').addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : cur === 'light' ? 'dark' : (matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('gt-theme', next); } catch (e){}
+  });
+  try { const t = localStorage.getItem('gt-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e){}
+
+  selectMethod('giandon');
+  SAMPLES.giandon(); renderTable('cpct', 'tbl_cpct'); compute();
+  el('results').insertAdjacentHTML('afterbegin',
+    `<div class="law noprint"><b>Đang hiển thị bài toán mẫu.</b> Doanh nghiệp chế biến cà phê, một loại sản phẩm, quy trình khép kín. Bấm <b>Xoá số liệu</b> để nhập dữ liệu của bạn, hoặc chọn phương pháp khác ở cột trái rồi bấm <b>Nạp bài toán mẫu</b>.</div>`);
+});
+
+/* ============================================================
+   QUẢN LÝ DÒNG + NHẬP DỮ LIỆU HÀNG LOẠT
+   ============================================================ */
+
+/* ---------- chuẩn hoá chuỗi để dò tên cột ---------- */
+function noAcc(s){
+  return String(s || '').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, ' ').trim();
+}
+function getPath(o, p){ return p.split('.').reduce((a, k) => (a == null ? a : a[k]), o); }
+function setPath(o, p, v){
+  const ks = p.split('.'); let t = o;
+  for (let i = 0; i < ks.length - 1; i++){ if (t[ks[i]] == null) t[ks[i]] = {}; t = t[ks[i]]; }
+  t[ks[ks.length - 1]] = v;
+}
+
+/* ---------- định nghĩa cột từng bảng ---------- */
+const KM_SEL = [['621', 'TK 621 — NVL trực tiếp'], ['622', 'TK 622 — Nhân công trực tiếp'],
+                ['623', 'TK 623 — Máy thi công'], ['627bd', 'TK 627 — SXC biến đổi'],
+                ['627cd', 'TK 627 — SXC cố định']];
+
+function tblCols(key){
+  const K = kms();
+  const km = (pre, lb) => K.map(m => ({ k: pre + m.k, l: `${lb} ${m.tk}`, t:'money', w:'minmax(105px,1fr)',
+                                        alias:[m.tk, lb + ' ' + m.tk, m.s] }));
+  switch (key){
+    case 'heso': return [
+      { k:'ten', l:'Tên sản phẩm', t:'text', w:'minmax(170px,2fr)', alias:['ten san pham','san pham','ten','product','dien giai'] },
+      { k:'q',   l:'Sản lượng hoàn thành', t:'qty', w:'minmax(120px,1fr)', alias:['san luong','so luong','san luong hoan thanh','q','quantity'] },
+      { k:'h',   l:'Hệ số quy đổi', t:'qty', w:'minmax(110px,1fr)', alias:['he so','he so quy doi','hs','h'] }
+    ];
+    case 'tyle': return [
+      { k:'ten', l:'Quy cách sản phẩm', t:'text', w:'minmax(150px,1.7fr)', alias:['quy cach','ten san pham','san pham','ten'] },
+      { k:'q',   l:'Sản lượng', t:'qty', w:'minmax(100px,.9fr)', alias:['san luong','so luong','q'] }
+    ].concat(km('', 'ĐM đơn vị'));
+    case 'spphu': return [
+      { k:'ten', l:'Sản phẩm phụ', t:'text', w:'minmax(160px,2fr)', alias:['san pham phu','ten','san pham'] },
+      { k:'q',   l:'Số lượng', t:'qty', w:'minmax(100px,1fr)', alias:['so luong','san luong','q'] },
+      { k:'gia', l:'Giá bán ước tính/đv', t:'money', w:'minmax(130px,1.2fr)', alias:['gia ban','gia','don gia','gia ban uoc tinh'] },
+      { k:'ln',  l:'Lợi nhuận định mức (%)', t:'qty', w:'minmax(120px,1fr)', alias:['loi nhuan','loi nhuan dinh muc','ln','ty le loi nhuan'] }
+    ];
+    case 'donhang': return [
+      { k:'ma',  l:'Mã đơn hàng', t:'text', w:'minmax(95px,.9fr)', alias:['ma','ma don hang','ma dh','so hop dong'] },
+      { k:'ten', l:'Nội dung đơn hàng', t:'text', w:'minmax(150px,1.5fr)', alias:['noi dung','ten','dien giai','ten don hang'] },
+      { k:'ht',  l:'Trạng thái', t:'sel', o:[['1', 'Đã hoàn thành'], ['0', 'Còn dở dang']], w:'minmax(125px,1.1fr)',
+        alias:['trang thai','hoan thanh','ht','status'] },
+      { k:'q',   l:'Số lượng', t:'qty', w:'minmax(90px,.8fr)', alias:['so luong','san luong','q'] },
+      { k:'ddk', l:'CP dở dang đầu kỳ', t:'money', w:'minmax(115px,1fr)', alias:['do dang dau ky','dau ky','ddk','cp do dang dau ky'] },
+      { k:'nvl', l:'CP NVLTT (621)', t:'money', w:'minmax(115px,1fr)', alias:['621','nvl','nvltt','cp nvltt'] },
+      { k:'nc',  l:'CP NCTT (622)', t:'money', w:'minmax(115px,1fr)', alias:['622','nc','nctt','cp nctt'] }
+    ].concat(XL ? [{ k:'mtc', l:'CP MTC (623)', t:'money', w:'minmax(115px,1fr)', alias:['623','mtc','may thi cong'] }] : [])
+     .concat([{ k:'tt', l:'Tiêu thức phân bổ', t:'qty', w:'minmax(115px,1fr)', alias:['tieu thuc','gio may','gio cong','tieu thuc phan bo'] }]);
+    case 'cpct': return [
+      { k:'ngay', l:'Ngày', t:'text', w:'minmax(90px,.8fr)', alias:['ngay','ngay thang','date'] },
+      { k:'ct',   l:'Số chứng từ', t:'text', w:'minmax(100px,.9fr)', alias:['so chung tu','chung tu','so ct','so hieu'] },
+      { k:'dg',   l:'Diễn giải', t:'text', w:'minmax(170px,2fr)', alias:['dien giai','noi dung','mo ta'] },
+      { k:'km',   l:'Khoản mục / Tài khoản', t:'sel', o:KM_SEL, w:'minmax(165px,1.4fr)',
+        alias:['khoan muc','tai khoan','tk','loai chi phi'] },
+      { k:'tien', l:'Số tiền', t:'money', w:'minmax(130px,1.2fr)', alias:['so tien','tien','gia tri','amount','phat sinh no'] }
+    ];
+    case 'buoc': return [
+      { k:'ten',   l:'Tên giai đoạn', t:'text', w:'minmax(150px,1.6fr)', alias:['ten giai doan','giai doan','ten','buoc'] },
+      { k:'qht',   l:'SL hoàn thành', t:'qty', w:'minmax(105px,1fr)', alias:['sl hoan thanh','san luong hoan thanh','qht'] },
+      { k:'qdd',   l:'SL dở dang', t:'qty', w:'minmax(105px,1fr)', alias:['sl do dang','san luong do dang','qdd'] },
+      { k:'pct',   l:'Mức độ HT (%)', t:'qty', w:'minmax(105px,1fr)', alias:['muc do hoan thanh','muc do ht','pct','%'] }
+    ].concat(K.map(m => ({ k:'C.' + m.k, l:`Phát sinh ${m.tk}`, t:'money', w:'minmax(110px,1fr)',
+                           alias:['phat sinh ' + m.tk, 'ps ' + m.tk, m.tk] })))
+     .concat(K.map(m => ({ k:'ddk.' + m.k, l:`Dở dang ĐK ${m.tk}`, t:'money', w:'minmax(110px,1fr)',
+                           alias:['do dang dk ' + m.tk, 'dau ky ' + m.tk, 'ddk ' + m.tk] })));
+  }
+  return [];
+}
+function tblTpl(key){
+  const z = { nvl:0, nc:0, mtc:0, sxc:0 };
+  switch (key){
+    case 'heso':    return { ten:'Sản phẩm mới', q:0, h:1 };
+    case 'tyle':    return { ten:'Quy cách mới', q:0, nvl:0, nc:0, mtc:0, sxc:0 };
+    case 'spphu':   return { ten:'Sản phẩm phụ', q:0, gia:0, ln:0 };
+    case 'donhang': return { ma:'ĐH-' + String(S.donhang.length + 1).padStart(2, '0'), ten:'', ht:'1', q:0, ddk:0, nvl:0, nc:0, mtc:0, tt:0 };
+    case 'cpct':    return { ngay:'', ct:'', dg:'', km:'621', tien:0 };
+    case 'buoc':    return { ten:'Giai đoạn ' + (S.buoc.length + 1), ddk:Object.assign({}, z), C:Object.assign({}, z), qht:0, qdd:0, pct:50 };
+  }
+  return {};
+}
+const TBL_NAME = { heso:'sản phẩm', tyle:'quy cách sản phẩm', spphu:'sản phẩm phụ',
+                   donhang:'đơn đặt hàng', cpct:'chứng từ chi phí', buoc:'giai đoạn' };
+const TBL_MIN  = { heso:1, tyle:1, spphu:1, donhang:1, cpct:0, buoc:1 };
+
+/* ---------- thao tác dòng ---------- */
+function rowAdd(key, n){
+  for (let i = 0; i < (n || 1); i++) S[key].push(tblTpl(key));
+  redraw(key);
+}
+function rowDup(key, i){ S[key].splice(i + 1, 0, JSON.parse(JSON.stringify(S[key][i]))); redraw(key); }
+function rowDel(key, i){
+  if (S[key].length <= TBL_MIN[key]){ toast('Cần giữ ít nhất ' + TBL_MIN[key] + ' dòng'); return; }
+  S[key].splice(i, 1); redraw(key);
+}
+function rowMove(key, i, d){
+  const j = i + d; if (j < 0 || j >= S[key].length) return;
+  const t = S[key][i]; S[key][i] = S[key][j]; S[key][j] = t; redraw(key);
+}
+function redraw(key){
+  if (key === 'buoc') drawBuoc(S.method === 'pb_kntp');
+  else renderTable(key, 'tbl_' + key);
+  compute();
+}
+
+/* ---------- thanh công cụ ---------- */
+function toolbarHTML(key){
+  const n = S[key].length;
+  return `<div class="tbar">
+    <button class="btn" data-op="add" data-key="${key}">+ Thêm ${TBL_NAME[key]}</button>
+    <button class="btn" data-op="add5" data-key="${key}">+ 5 dòng</button>
+    <span class="sepr"></span>
+    <button class="btn primary" data-op="imp" data-key="${key}">⤓ Nhập hàng loạt</button>
+    <button class="btn" data-op="cp" data-key="${key}">Sao chép bảng</button>
+    <button class="btn" data-op="clr" data-key="${key}">Xoá hết</button>
+    <span class="cnt">${n} dòng</span>
+  </div>`;
+}
+function bindToolbar(host){
+  $$('[data-op]', host).forEach(b => b.addEventListener('click', () => {
+    const k = b.dataset.key;
+    if (b.dataset.op === 'add') rowAdd(k, 1);
+    else if (b.dataset.op === 'add5') rowAdd(k, 5);
+    else if (b.dataset.op === 'imp') openImport(k);
+    else if (b.dataset.op === 'cp') copyTable(k);
+    else if (b.dataset.op === 'clr'){
+      const keep = TBL_MIN[k];
+      S[k] = []; for (let i = 0; i < keep; i++) S[k].push(tblTpl(k));
+      redraw(k); toast('Đã xoá toàn bộ dòng');
+    }
+  }));
+}
+
+/* ---------- vẽ bảng dạng dòng ---------- */
+function renderTable(key, mountId){
+  const host = el(mountId); if (!host) return;
+  const cols = tblCols(key);
+  const grid = cols.map(c => c.w).join(' ') + ' auto';
+  const minw = cols.length * 110 + 96;
+  host.innerHTML = toolbarHTML(key) +
+    `<div class="rowed" style="overflow-x:auto"><div style="min-width:${minw}px;display:flex;flex-direction:column;gap:6px" id="rws_${key}"></div></div>`;
+  bindToolbar(host);
+  const wrap = el('rws_' + key);
+  wrap.innerHTML = S[key].map((r, i) => `<div class="rw" style="grid-template-columns:22px ${grid}">
+      <span class="rwidx">${i + 1}</span>
+      ${cols.map(c => `<label class="f"><span class="lb">${i === 0 ? c.l : ''}</span>${fieldHTML(c, r, i)}</label>`).join('')}
+      <span class="rwops">
+        <button data-mv="-1" data-i="${i}" title="Lên trên" ${i === 0 ? 'disabled' : ''}>↑</button>
+        <button data-mv="1"  data-i="${i}" title="Xuống dưới" ${i === S[key].length - 1 ? 'disabled' : ''}>↓</button>
+        <button data-dup="${i}" title="Nhân bản dòng">⧉</button>
+        <button class="del" data-del="${i}" title="Xoá dòng">✕</button>
+      </span></div>`).join('');
+  $$('[data-k]', wrap).forEach(inp => inp.addEventListener('input', e => {
+    const c = cols.find(x => x.k === e.target.dataset.k);
+    const v = (c.t === 'text' || c.t === 'sel') ? e.target.value : pn(e.target.value);
+    setPath(S[key][+e.target.dataset.i], c.k, v);
+    compute();
+  }));
+  $$('[data-mv]', wrap).forEach(b => b.addEventListener('click', () => rowMove(key, +b.dataset.i, +b.dataset.mv)));
+  $$('[data-dup]', wrap).forEach(b => b.addEventListener('click', () => rowDup(key, +b.dataset.dup)));
+  $$('[data-del]', wrap).forEach(b => b.addEventListener('click', () => rowDel(key, +b.dataset.del)));
+}
+function fieldHTML(c, r, i){
+  const v = getPath(r, c.k);
+  if (c.t === 'sel')
+    return `<select data-k="${c.k}" data-i="${i}">${c.o.map(o => `<option value="${o[0]}"${String(v) === String(o[0]) ? ' selected' : ''}>${o[1]}</option>`).join('')}</select>`;
+  const val = c.t === 'text' ? String(v == null ? '' : v).replace(/"/g, '&quot;') : fq(v || 0);
+  return `<input class="${c.t === 'text' ? '' : c.t}" type="text" data-k="${c.k}" data-i="${i}" value="${val}">`;
+}
+
+/* ---------- sao chép bảng sang Excel ---------- */
+function tableTSV(key, withData){
+  const cols = tblCols(key);
+  const lines = [cols.map(c => c.l).join('\t')];
+  const src = withData ? S[key] : [tblExample(key)];
+  src.forEach(r => lines.push(cols.map(c => {
+    const v = getPath(r, c.k);
+    if (c.t === 'sel'){ const o = c.o.find(x => String(x[0]) === String(v)); return o ? o[1] : (v || ''); }
+    if (c.t === 'text') return v == null ? '' : v;
+    return String(v == null ? 0 : v).replace('.', ',');
+  }).join('\t')));
+  return lines.join('\n');
+}
+function tblExample(key){
+  const K = kms(); const o = tblTpl(key);
+  const ex = {
+    heso:    { ten:'Dầu A (tiêu chuẩn)', q:40000, h:1 },
+    tyle:    { ten:'Áo sơ mi size M', q:15000, nvl:100000, nc:38000, mtc:0, sxc:27000 },
+    spphu:   { ten:'Rỉ đường (mật rỉ)', q:900, gia:1200000, ln:15 },
+    donhang: { ma:'ĐH-01', ten:'Khung thép nhà xưởng', ht:'1', q:50, ddk:220000000, nvl:1200000000, nc:180000000, mtc:0, tt:3000 },
+    cpct:    { ngay:'05/08/2026', ct:'PX08-012', dg:'Xuất kho hạt cà phê nhân', km:'621', tien:850000000 },
+    buoc:    { ten:'Kéo sợi', qht:100000, qdd:10000, pct:50,
+               C:{ nvl:800000000, nc:150000000, mtc:0, sxc:120000000 },
+               ddk:{ nvl:50000000, nc:10000000, mtc:0, sxc:8000000 } }
+  }[key];
+  return Object.assign({}, o, ex);
+}
+async function copyClip(txt, msg){
+  try { await navigator.clipboard.writeText(txt); toast(msg); return true; }
+  catch (e){
+    const ta = document.createElement('textarea'); ta.value = txt;
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch (_){}
+    document.body.removeChild(ta); toast(ok ? msg : 'Trình duyệt không cho phép sao chép'); return ok;
+  }
+}
+function copyTable(key){ copyClip(tableTSV(key, true), 'Đã sao chép bảng — dán (Ctrl+V) vào Excel'); }
+
+/* ============================================================
+   ĐỌC FILE — CSV / TSV / XLSX
+   ============================================================ */
+function splitDelim(text, sep){
+  const rows = []; let row = [], cur = '', q = false;
+  for (let i = 0; i < text.length; i++){
+    const ch = text[i];
+    if (q){
+      if (ch === '"'){ if (text[i + 1] === '"'){ cur += '"'; i++; } else q = false; }
+      else cur += ch;
+    } else if (ch === '"') q = true;
+    else if (ch === sep){ row.push(cur); cur = ''; }
+    else if (ch === '\n'){ row.push(cur); rows.push(row); row = []; cur = ''; }
+    else if (ch === '\r'){ /* bỏ qua */ }
+    else cur += ch;
+  }
+  row.push(cur); rows.push(row);
+  return rows.map(r => r.map(x => x.trim())).filter(r => r.some(x => x !== ''));
+}
+function guessSep(text){
+  const line = (text.split('\n').find(l => l.trim() !== '') || '');
+  const cnt = s => (line.split(s).length - 1);
+  const cands = [['\t', cnt('\t')], [';', cnt(';')], [',', cnt(',')], ['|', cnt('|')]];
+  cands.sort((a, b) => b[1] - a[1]);
+  return cands[0][1] > 0 ? cands[0][0] : '\t';
+}
+
+const XMLENT = { amp:'&', lt:'<', gt:'>', quot:'"', apos:"'" };
+function decX(s){
+  return String(s).replace(/&(#x?[0-9a-fA-F]+|amp|lt|gt|quot|apos);/g, (m, g) =>
+    g[0] === '#' ? String.fromCodePoint(parseInt(g[1] === 'x' ? g.slice(2) : g.slice(1), g[1] === 'x' ? 16 : 10)) : (XMLENT[g] || m));
+}
+function colIdx(a){ let n = 0; for (let i = 0; i < a.length; i++) n = n * 26 + (a.charCodeAt(i) - 64); return n - 1; }
+
+async function inflateRaw(u8){
+  if (typeof DecompressionStream === 'undefined') throw new Error('nodecomp');
+  const s = new Blob([u8]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+  return new Uint8Array(await new Response(s).arrayBuffer());
+}
+async function unzipXlsx(ab){
+  const dv = new DataView(ab), u8 = new Uint8Array(ab);
+  let eo = -1;
+  for (let i = u8.length - 22; i >= Math.max(0, u8.length - 70000); i--){
+    if (dv.getUint32(i, true) === 0x06054b50){ eo = i; break; }
+  }
+  if (eo < 0) throw new Error('Không nhận dạng được cấu trúc file .xlsx');
+  const n = dv.getUint16(eo + 10, true);
+  let off = dv.getUint32(eo + 16, true);
+  const want = /^xl\/(workbook\.xml|sharedStrings\.xml|worksheets\/sheet\d+\.xml)$/;
+  const res = {};
+  const dec = new TextDecoder('utf-8');
+  for (let k = 0; k < n; k++){
+    if (dv.getUint32(off, true) !== 0x02014b50) break;
+    const method = dv.getUint16(off + 10, true);
+    const csize = dv.getUint32(off + 20, true);
+    const nlen = dv.getUint16(off + 28, true);
+    const elen = dv.getUint16(off + 30, true);
+    const clen = dv.getUint16(off + 32, true);
+    const lho = dv.getUint32(off + 42, true);
+    const name = dec.decode(u8.subarray(off + 46, off + 46 + nlen));
+    off += 46 + nlen + elen + clen;
+    if (!want.test(name)) continue;
+    const lnl = dv.getUint16(lho + 26, true), lel = dv.getUint16(lho + 28, true);
+    const st = lho + 30 + lnl + lel;
+    const raw = u8.subarray(st, st + csize);
+    res[name] = dec.decode(method === 0 ? raw : await inflateRaw(raw));
+  }
+  return res;
+}
+function parseShared(xml){
+  return [...xml.matchAll(/<si\b[^>]*>([\s\S]*?)<\/si>/g)]
+    .map(m => decX([...m[1].matchAll(/<t\b[^>]*>([\s\S]*?)<\/t>/g)].map(t => t[1]).join('')));
+}
+function parseSheetXml(xml, shared){
+  const rows = [];
+  for (const rm of xml.matchAll(/<row\b([^>]*)>([\s\S]*?)<\/row>/g)){
+    const rr = /r="(\d+)"/.exec(rm[1]);
+    const ri = rr ? (+rr[1] - 1) : rows.length;
+    const cells = [];
+    for (const cm of rm[2].matchAll(/<c\b([^>]*?)(?:\/>|>([\s\S]*?)<\/c>)/g)){
+      const at = cm[1] || '', inn = cm[2] || '';
+      const rf = /r="([A-Z]+)\d+"/.exec(at);
+      const ci = rf ? colIdx(rf[1]) : cells.length;
+      const tt = /t="([^"]+)"/.exec(at);
+      let v = '';
+      if (tt && tt[1] === 's'){ const vm = /<v>([\s\S]*?)<\/v>/.exec(inn); v = vm ? (shared[+vm[1]] || '') : ''; }
+      else if (tt && (tt[1] === 'inlineStr' || tt[1] === 'str'))
+        v = decX([...inn.matchAll(/<t\b[^>]*>([\s\S]*?)<\/t>/g)].map(t => t[1]).join('')) ||
+            decX((/<v>([\s\S]*?)<\/v>/.exec(inn) || ['', ''])[1]);
+      else { const vm = /<v>([\s\S]*?)<\/v>/.exec(inn); v = vm ? decX(vm[1]) : ''; }
+      cells[ci] = v;
+    }
+    rows[ri] = cells;
+  }
+  const max = rows.reduce((a, r) => Math.max(a, r ? r.length : 0), 0);
+  return rows.filter(Boolean)
+    .map(r => { const o = []; for (let i = 0; i < max; i++) o.push(r[i] === undefined ? '' : r[i]); return o; })
+    .filter(r => r.some(x => String(x).trim() !== ''));
+}
+async function readXlsx(ab){
+  const f = await unzipXlsx(ab);
+  if (!f['xl/workbook.xml']) throw new Error('Thiếu workbook.xml — file không hợp lệ');
+  const names = [...f['xl/workbook.xml'].matchAll(/<sheet\b[^>]*name="([^"]*)"/g)].map(m => decX(m[1]));
+  const shared = f['xl/sharedStrings.xml'] ? parseShared(f['xl/sharedStrings.xml']) : [];
+  const keys = Object.keys(f).filter(k => /worksheets\/sheet\d+\.xml$/.test(k))
+    .sort((a, b) => (+a.match(/(\d+)\.xml$/)[1]) - (+b.match(/(\d+)\.xml$/)[1]));
+  return keys.map((k, i) => ({ name: names[i] || ('Sheet ' + (i + 1)), grid: parseSheetXml(f[k], shared) }));
+}
+
+/* ============================================================
+   HỘP THOẠI NHẬP HÀNG LOẠT
+   ============================================================ */
+const IMP = { key:null, cols:[], raw:[], grid:[], map:[], sheets:null, tab:'paste', mapped:false };
+
+/* Dò cột đích khớp với một ô tiêu đề */
+/* Alias ngắn (dưới 4 ký tự) chỉ chấp nhận khớp tuyệt đối, tránh "h" khớp mọi tiêu đề có chữ h */
+function aliasHit(c, n){
+  return [noAcc(c.l)].concat((c.alias || []).map(noAcc))
+    .some(a => a && (a === n || (a.length >= 4 && n.length >= 4 && (n.indexOf(a) >= 0 || a.indexOf(n) >= 0))));
+}
+function matchCol(h, skip){
+  const n = noAcc(h); if (!n || n.length < 2) return null;
+  return IMP.cols.find(c => (!skip || !skip.has(c.k)) && aliasHit(c, n)) || null;
+}
+/* Tự tìm dòng tiêu đề và cắt đúng khối dữ liệu — cho phép dán cả vùng chứa nhiều bảng */
+function autoSlice(raw){
+  if (!raw.length || !el('impHdr').checked) return raw;
+  const score = row => row.reduce((n, c) => n + (matchCol(c) ? 1 : 0), 0);
+  let hi = 0, best = -1;
+  for (let i = 0; i < Math.min(raw.length, 60); i++){
+    const s = score(raw[i]); if (s > best){ best = s; hi = i; }
+  }
+  if (best < 2) return raw;
+  const out = [raw[hi]];
+  for (let i = hi + 1; i < raw.length; i++){
+    if (raw[i].filter(c => String(c).trim() !== '').length <= 1) break;
+    out.push(raw[i]);
+  }
+  return out;
+}
+
+function openImport(key){
+  IMP.key = key; IMP.cols = tblCols(key); IMP.raw = []; IMP.grid = []; IMP.map = []; IMP.sheets = null; IMP.mapped = false;
+  el('impTitle').textContent = 'Nhập hàng loạt — bảng ' + TBL_NAME[key];
+  el('impText').value = '';
+  el('impFile').value = '';
+  el('impSheetWrap').hidden = true;
+  el('impCfg').hidden = true;
+  el('impErr').innerHTML = '';
+  el('impTplPrev').innerHTML = gridPreview([tblCols(key).map(c => c.l),
+    tblCols(key).map(c => { const v = getPath(tblExample(key), c.k);
+      if (c.t === 'sel'){ const o = c.o.find(x => String(x[0]) === String(v)); return o ? o[1] : v; }
+      return c.t === 'text' ? v : fq(v); })], [], tblCols(key).map(c => c.t));
+  impTab('paste');
+  el('imp').hidden = false;
+  setTimeout(() => el('impText').focus(), 30);
+}
+function closeImport(){ el('imp').hidden = true; }
+
+function impTab(t){
+  IMP.tab = t;
+  $$('#impTabs button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === t)));
+  el('pnPaste').hidden = t !== 'paste';
+  el('pnFile').hidden = t !== 'file';
+  el('pnTpl').hidden = t !== 'tpl';
+  el('impCopyTpl').hidden = t !== 'tpl';
+  el('impCfg').hidden = (t === 'tpl') || IMP.grid.length === 0;
+  ['impAppend', 'impReplace'].forEach(id => { el(id).style.display = (t === 'tpl') ? 'none' : ''; });
+}
+
+function gridPreview(rows, bad, types){
+  if (!rows.length) return '<p class="hint" style="padding:12px">Chưa có dữ liệu.</p>';
+  const cls = ci => (types && (types[ci] === 'text' || types[ci] === 'sel')) ? 't' : 'n';
+  return `<table><thead><tr>${rows[0].map(h => `<th>${String(h || '')}</th>`).join('')}</tr></thead><tbody>${
+    rows.slice(1).map((r, ri) => `<tr>${r.map((c, ci) =>
+      `<td class="${cls(ci)}${(bad && bad.some(b => b[0] === ri && b[1] === ci)) ? ' bad' : ''}">${String(c == null ? '' : c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+}
+
+function impSetGrid(raw){
+  IMP.raw = raw; IMP.grid = autoSlice(raw); IMP.mapped = false;
+  if (!IMP.grid.length){ el('impCfg').hidden = true; return; }
+  el('impCfg').hidden = false;
+  buildMap();
+  refreshPreview();
+  if (raw.length > IMP.grid.length)
+    el('impCount').textContent += ` — đã tự nhận dạng khối dữ liệu trong ${raw.length} dòng nguồn`;
+}
+function impParseText(){
+  const txt = el('impText').value;
+  if (!txt.trim()){ IMP.raw = []; IMP.grid = []; el('impCfg').hidden = true; return; }
+  let sep = el('impSep').value;
+  if (sep === 'auto') sep = guessSep(txt);
+  impSetGrid(splitDelim(txt, sep));
+}
+
+function buildMap(){
+  const hdrOn = el('impHdr').checked;
+  const head = hdrOn ? IMP.grid[0] : IMP.grid[0].map((_, i) => 'Cột ' + (i + 1));
+  const used = new Set();
+  IMP.map = head.map((h, i) => {
+    if (!hdrOn) return IMP.cols[i] ? IMP.cols[i].k : '';
+    const c = matchCol(h, used);
+    const best = c ? c.k : '';
+    if (best) used.add(best);
+    return best;
+  });
+  // cột chưa ghép -> gán theo thứ tự còn trống
+  IMP.map = IMP.map.map((m, i) => {
+    if (m) return m;
+    const free = IMP.cols.find(c => !IMP.map.includes(c.k) && !used.has(c.k));
+    if (free && !hdrOn){ used.add(free.k); return free.k; }
+    return m;
+  });
+  el('impMap').innerHTML = head.map((h, i) => `<label class="f"><span class="lb">Cột nguồn: <b>${String(h || '').slice(0, 40) || '(trống)'}</b></span>
+    <select data-mi="${i}"><option value="">— Bỏ qua cột này —</option>${
+      IMP.cols.map(c => `<option value="${c.k}"${IMP.map[i] === c.k ? ' selected' : ''}>${c.l}</option>`).join('')}</select></label>`).join('');
+  $$('#impMap select').forEach(s => s.addEventListener('change', () => {
+    IMP.map[+s.dataset.mi] = s.value; refreshPreview();
+  }));
+}
+
+function coerce(col, raw){
+  const s = String(raw == null ? '' : raw).trim();
+  if (col.t === 'text') return { v:s, ok:true };
+  if (col.t === 'sel'){
+    const n = noAcc(s);
+    let hit = col.o.find(o => noAcc(o[1]) === n || String(o[0]) === s);
+    if (!hit) hit = col.o.find(o => n && (noAcc(o[1]).indexOf(n) >= 0 || n.indexOf(noAcc(o[0])) >= 0));
+    if (!hit && col.k === 'ht'){
+      if (/^(1|x|co|yes|true|ht|hoan thanh|da hoan thanh)$/.test(n)) hit = col.o[0];
+      else if (/^(0|khong|no|false|dd|do dang|con do dang|chua hoan thanh)$/.test(n)) hit = col.o[1];
+    }
+    if (!hit && col.k === 'km'){
+      if (/627/.test(s) && /co dinh|cd/.test(n)) hit = col.o[4];
+      else if (/627/.test(s)) hit = col.o[3];
+      else if (/621/.test(s)) hit = col.o[0];
+      else if (/622/.test(s)) hit = col.o[1];
+      else if (/623/.test(s)) hit = col.o[2];
+    }
+    return hit ? { v:hit[0], ok:true } : { v:col.o[0][0], ok:s === '' };
+  }
+  if (s === '') return { v:0, ok:true };
+  const cleaned = s.replace(/[()]/g, m => m === '(' ? '-' : '').replace(/[^\d.,\-]/g, '');
+  const n = pn(cleaned);
+  const ok = /\d/.test(cleaned) && isFinite(n);
+  return { v: ok ? (s.trim().charAt(0) === '(' ? -Math.abs(n) : n) : 0, ok };
+}
+
+function impRows(){
+  const hdrOn = el('impHdr').checked;
+  const data = hdrOn ? IMP.grid.slice(1) : IMP.grid;
+  const bad = [];
+  const rows = data.map((src, ri) => {
+    const o = JSON.parse(JSON.stringify(tblTpl(IMP.key)));
+    IMP.map.forEach((mk, ci) => {
+      if (!mk) return;
+      const col = IMP.cols.find(c => c.k === mk); if (!col) return;
+      const r = coerce(col, src[ci]);
+      if (!r.ok) bad.push([ri, IMP.cols.indexOf(col)]);
+      setPath(o, col.k, r.v);
+    });
+    return o;
+  });
+  return { rows, bad };
+}
+function refreshPreview(){
+  if (!IMP.grid.length) return;
+  const { rows, bad } = impRows();
+  const cols = IMP.cols;
+  const view = [cols.map(c => c.l)].concat(rows.slice(0, 12).map(r => cols.map(c => {
+    const v = getPath(r, c.k);
+    if (c.t === 'sel'){ const o = c.o.find(x => String(x[0]) === String(v)); return o ? o[1] : v; }
+    return c.t === 'text' ? v : fq(v);
+  })));
+  el('impPrev').innerHTML = gridPreview(view, bad, cols.map(c => c.t));
+  el('impCount').textContent = `— đọc được ${rows.length} dòng${rows.length > 12 ? ' (hiển thị 12 dòng đầu)' : ''}`;
+  el('impErr').innerHTML = bad.length
+    ? `<div class="warnbox"><b>${bad.length} ô không đọc được giá trị số</b> — đã tô đỏ ở bảng xem trước và tạm gán bằng 0. Kiểm tra lại cách ghép cột hoặc sửa dữ liệu nguồn rồi dán lại.</div>`
+    : (rows.length ? '<div class="law">Dữ liệu hợp lệ — chọn <b>Thay thế toàn bộ bảng</b> hoặc <b>Nối thêm vào cuối bảng</b>.</div>' : '');
+}
+function applyImport(mode){
+  if (!IMP.grid.length){ toast('Chưa có dữ liệu để nạp'); return; }
+  const { rows } = impRows();
+  if (!rows.length){ toast('Không đọc được dòng nào'); return; }
+  if (mode === 'replace') S[IMP.key] = rows;
+  else S[IMP.key] = S[IMP.key].concat(rows);
+  closeImport(); redraw(IMP.key);
+  toast(`Đã nạp ${rows.length} dòng vào bảng ${TBL_NAME[IMP.key]}`);
+}
+
+async function handleFile(file){
+  try {
+    if (/\.xlsx$/i.test(file.name)){
+      const sh = await readXlsx(await file.arrayBuffer());
+      if (!sh.length) throw new Error('Không tìm thấy sheet nào trong file');
+      IMP.sheets = sh;
+      el('impSheetWrap').hidden = sh.length < 2;
+      el('impSheet').innerHTML = sh.map((s, i) => `<option value="${i}">${s.name} (${s.grid.length} dòng)</option>`).join('');
+      el('impSheet').value = '0';
+      impSetGrid(sh[0].grid);
+      toast(`Đã đọc file ${file.name}`);
+    } else {
+      const txt = await file.text();
+      let sep = el('impSep').value; if (sep === 'auto') sep = guessSep(txt);
+      el('impSheetWrap').hidden = true;
+      impSetGrid(splitDelim(txt, sep));
+      toast(`Đã đọc file ${file.name}`);
+    }
+  } catch (e){
+    const msg = e && e.message === 'nodecomp'
+      ? 'Trình duyệt này không đọc được file .xlsx nén. Hãy lưu file sang định dạng CSV rồi tải lại, hoặc dùng tab “Dán từ Excel”.'
+      : 'Không đọc được file: ' + (e && e.message ? e.message : e) + '. Hãy thử lưu sang CSV hoặc dùng tab “Dán từ Excel”.';
+    el('impCfg').hidden = true;
+    el('impErr').innerHTML = `<div class="warnbox">${msg}</div>`;
+    el('impErr').scrollIntoView({ block:'nearest' });
+  }
+}
+
+/* ---------- chi tiết chứng từ chi phí ---------- */
+function syncCostDetail(){
+  const on = el('optChiTiet') && el('optChiTiet').checked;
+  const blk = el('ctBlock'); if (blk) blk.hidden = !on;
+  ['c_nvl', 'c_nc', 'c_mtc', 'c_sxcbd', 'c_sxccd'].forEach(id => { if (el(id)) el(id).readOnly = !!on; });
+  if (!on) return;
+  const t = { '621':0, '622':0, '623':0, '627bd':0, '627cd':0 };
+  S.cpct.forEach(r => { if (t[r.km] !== undefined) t[r.km] += pn(r.tien); });
+  setV('c_nvl', t['621']); setV('c_nc', t['622']); setV('c_mtc', t['623']);
+  setV('c_sxcbd', t['627bd']); setV('c_sxccd', t['627cd']);
+}
+
+/* ---------- gắn sự kiện hộp thoại ---------- */
+function initImport(){
+  el('impX').onclick = closeImport;
+  el('impCancel').onclick = closeImport;
+  el('imp').addEventListener('click', e => { if (e.target === el('imp')) closeImport(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !el('imp').hidden) closeImport(); });
+  $$('#impTabs button').forEach(b => b.onclick = () => impTab(b.dataset.t));
+  el('impText').addEventListener('input', impParseText);
+  el('impText').addEventListener('paste', () => setTimeout(impParseText, 10));
+  el('impSep').addEventListener('change', () => { if (IMP.tab === 'paste') impParseText(); });
+  el('impHdr').addEventListener('change', () => { if (IMP.raw.length) impSetGrid(IMP.raw); });
+  el('impSheet').addEventListener('change', e => { if (IMP.sheets) impSetGrid(IMP.sheets[+e.target.value].grid); });
+  el('impDrop').onclick = () => el('impFile').click();
+  el('impFile').addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
+  ['dragenter', 'dragover'].forEach(ev => el('impDrop').addEventListener(ev, e => { e.preventDefault(); el('impDrop').classList.add('over'); }));
+  ['dragleave', 'drop'].forEach(ev => el('impDrop').addEventListener(ev, e => { e.preventDefault(); el('impDrop').classList.remove('over'); }));
+  el('impDrop').addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) handleFile(f); });
+  el('impCopyTpl').onclick = () => copyClip(tableTSV(IMP.key, false), 'Đã sao chép bảng mẫu — dán vào Excel');
+  el('impAppend').onclick = () => applyImport('append');
+  el('impReplace').onclick = () => applyImport('replace');
+  if (el('optChiTiet')) el('optChiTiet').addEventListener('change', () => {
+    if (el('optChiTiet').checked && !S.cpct.length) S.cpct = [tblTpl('cpct')];
+    renderTable('cpct', 'tbl_cpct'); compute();
+  });
+  renderTable('cpct', 'tbl_cpct');
+}
+</script>
+
+</body>
+</html>
